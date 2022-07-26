@@ -3,6 +3,9 @@
   import Machine from '../machine/index'
 
   onMount(() => {
+    Matter.use(
+      'matter-wrap'
+    );
     Machine.init('entropy')
   })
 </script>

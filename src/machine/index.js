@@ -35,7 +35,7 @@ Machine.init = function(name) {
     options: {
       width: 800,
       height: 600,
-      showAngleIndicator: true
+      wireframes: false
     }
   });
 
