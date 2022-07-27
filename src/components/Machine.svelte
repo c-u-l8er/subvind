@@ -1,13 +1,23 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
-  import Machine from '../machine/index'
 
+  import Library from '../machine/index'
+
+  export let machine: any
+  
   onMount(() => {
     Matter.use(
       'matter-wrap'
     );
-    Machine.init('entropy')
+    machine = Library.init('entropy')
+    setTimeout(() => {
+      machine.stop()
+    }, 0)
+    setTimeout(() => {
+      machine.start()
+    }, 2000)
   })
+
 </script>
 
 <div id="entropy"></div>

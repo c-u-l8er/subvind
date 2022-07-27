@@ -47,12 +47,12 @@ Machine.init = function(name) {
   Runner.run(runner, engine);
 
   // add red circles
-  var redStack = Composites.stack(-600, -2000, 5, 5, 10, 10, function(x, y) {
+  var redStack = Composites.stack(-650, -2000, 5, 5, 10, 10, function(x, y) {
     return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'red' } });
   });
 
   // add green circles
-  var greenStack = Composites.stack(-300, -2000, 5, 5, 10, 10, function(x, y) {
+  var greenStack = Composites.stack(-350, -2000, 5, 5, 10, 10, function(x, y) {
     return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'green' } });
   });
 
@@ -141,11 +141,20 @@ Machine.init = function(name) {
 
   // context for MatterTools.Demo
   return {
+    name: name,
     engine: engine,
     runner: runner,
     render: render,
     canvas: render.canvas,
     stop: function() {
+      Matter.Render.stop(render);
+      Matter.Runner.stop(runner);
+    },
+    start: function() {
+      Matter.Render.run(render);
+      Matter.Runner.run(runner, engine);
+    },
+    pause: function() {
       Matter.Render.stop(render);
       Matter.Runner.stop(runner);
     }

@@ -1,10 +1,33 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
 
   import Machine from '../components/Machine.svelte'
+  import Library from '../machine/index'
+
+  let machine: any
 
   onMount(() => {
+    //
   })
+
+  function stop (e: any) {
+    e.preventDefault()
+    machine.stop()
+    let el: any = document.getElementById("entropy")
+    el.innerHTML = "";
+    machine = Library.init('entropy')
+    setTimeout(() => {
+      machine.stop()
+    }, 0)
+  }
+  function start (e: any) {
+    e.preventDefault()
+    machine.start()
+  }
+  function pause (e: any) {
+    e.preventDefault()
+    machine.pause()
+  }
 </script>
 
 <svelte:head>
@@ -18,9 +41,9 @@
   <div class="control-panel">
     <div class="content">
       <div class="main-settings">
-        <a href="#!" class="btn btn-large"><i class="material-icons">play_arrow</i></a>
-        <a href="#!" class="btn btn-large"><i class="material-icons">pause</i></a>
-        <a href="#!" class="btn btn-large"><i class="material-icons">stop</i></a>
+        <a href="#!" class="btn btn-large" on:click={(e) => start(e)}><i class="material-icons">play_arrow</i></a>
+        <a href="#!" class="btn btn-large" on:click={(e) => pause(e)}><i class="material-icons">pause</i></a>
+        <a href="#!" class="btn btn-large" on:click={(e) => stop(e)}><i class="material-icons">stop</i></a>
       </div>
       <header>
         <h1>EntropyMachine</h1>
@@ -30,7 +53,7 @@
   </div>
   <div style="border: 1em solid #333; background: #000; margin: 0 3em;">
     <div class="entropy">
-      <Machine />
+      <Machine bind:machine={machine} />
     </div>
   </div>
   <div class="reports">
