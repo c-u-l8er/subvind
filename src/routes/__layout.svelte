@@ -24,7 +24,7 @@
       </div>
       <header>
         <h1>EntropyMachine</h1>
-        <h2>by <a href="https://istrav.com" target="_blank">istrav.com</a></h2>
+        <h2>Streaming Randomness</h2>
       </header>
     </div>
   </div>
@@ -80,17 +80,9 @@
     font-size: 3em;
   }
   .control-panel h2 {
-    color: #444;
+    color: #888;
     font-size: 1em;
     margin: 0 0 0.5em;
-  }
-
-  .control-panel h2 a {
-    color: #444;
-    text-decoration: none;
-  }
-  .control-panel h2 a:hover {
-    color: #ccc;
   }
 
   .entropy {
