@@ -66,6 +66,7 @@ Machine.init = function(name) {
     return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'yellow' } });
   });
 
+  // apply stacks of circles
   Composite.add(world, redStack);
   Composite.add(world, greenStack);
   Composite.add(world, blueStack);
@@ -105,6 +106,11 @@ Machine.init = function(name) {
       }
     });
 
+  // disable mouse croll
+  mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
+  mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
+
+  // apply mouse constraint
   Composite.add(world, mouseConstraint);
 
   // keep the mouse in sync with rendering
