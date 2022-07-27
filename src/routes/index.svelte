@@ -1,5 +1,10 @@
 <script>
+import { onMount } from 'svelte';
+
   import Machine from '../components/Machine.svelte'
+
+  onMount(() => {
+  })
 </script>
 
 <br />
@@ -8,9 +13,9 @@
   <div class="control-panel">
     <div class="content">
       <div class="main-settings">
-        <a href="" class="btn btn-large"><i class="material-icons">play_arrow</i></a>
-        <a href="" class="btn btn-large"><i class="material-icons">pause</i></a>
-        <a href="" class="btn btn-large"><i class="material-icons">stop</i></a>
+        <a href="#!" class="btn btn-large"><i class="material-icons">play_arrow</i></a>
+        <a href="#!" class="btn btn-large"><i class="material-icons">pause</i></a>
+        <a href="#!" class="btn btn-large"><i class="material-icons">stop</i></a>
       </div>
       <header>
         <h1>EntropyMachine</h1>
@@ -22,6 +27,23 @@
     <div class="entropy">
       <Machine />
     </div>
+  </div>
+  <div class="reports">
+    <nav>
+      <div class="nav-wrapper">
+        <ul class="left">
+          <li><a href="sass.html">Analytics</a></li>
+          <li><a href="badges.html">Balls</a></li>
+          <li><a href="collapsible.html">Spray</a></li>
+          <li><a href="collapsible.html">Detector</a></li>
+        </ul>
+        <a href="#" class="brand-logo center">Stream</a>
+        <ul class="right">
+          <li><a href="sass.html">Settings</a></li>
+          <li><a href="badges.html">Import / Export</a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
 </div>
 <br />
@@ -38,6 +60,15 @@
     width: 1000px;
     border: 1em solid #333;
     border-bottom: 0;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm20 0a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM10 37a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm10-17h20v20H20V20zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14z' fill='%23111111' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  .reports {
+    margin: 0 auto;
+    width: 1000px;
+    border: 1em solid #333;
+    border-top: 0;
     background-color: #000000;
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm20 0a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM10 37a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm10-17h20v20H20V20zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14z' fill='%23111111' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
   }
