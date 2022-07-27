@@ -33,9 +33,10 @@ Machine.init = function(name) {
     element: document.getElementById(name),
     engine: engine,
     options: {
-      width: 800,
-      height: 600,
-      wireframes: false
+      width: 1000,
+      height: 1000,
+      wireframes: false,
+      background: "#000",
     }
   });
 
@@ -45,18 +46,52 @@ Machine.init = function(name) {
   var runner = Runner.create();
   Runner.run(runner, engine);
 
-  // add bodies
-  var stack = Composites.stack(20, 20, 20, 5, 0, 0, function(x, y) {
-    return Bodies.circle(x, y, Common.random(10, 20), { friction: 0.00001, restitution: 0.5, density: 0.001 });
+  // add red circles
+  var redStack = Composites.stack(-600, -2000, 5, 5, 10, 10, function(x, y) {
+    return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'red' } });
   });
 
-  Composite.add(world, stack);
+  // add green circles
+  var greenStack = Composites.stack(-300, -2000, 5, 5, 10, 10, function(x, y) {
+    return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'green' } });
+  });
+
+  // add blue circles
+  var blueStack = Composites.stack(200, -2000, 5, 5, 10, 10, function(x, y) {
+    return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'blue' } });
+  });
+
+  // add yellow circles
+  var yellowStack = Composites.stack(500, -2000, 5, 5, 10, 10, function(x, y) {
+    return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'yellow' } });
+  });
+
+  Composite.add(world, redStack);
+  Composite.add(world, greenStack);
+  Composite.add(world, blueStack);
+  Composite.add(world, yellowStack);
   
+  // add hole shot
   Composite.add(world, [
-    Bodies.rectangle(200, 150, 700, 20, { isStatic: true, angle: Math.PI * 0.06, render: { fillStyle: '#060a19' } }),
-    Bodies.rectangle(500, 350, 700, 20, { isStatic: true, angle: -Math.PI * 0.06, render: { fillStyle: '#060a19' } }),
-    Bodies.rectangle(340, 580, 700, 20, { isStatic: true, angle: Math.PI * 0.04, render: { fillStyle: '#060a19' } })
+    Bodies.rectangle(-400, -1500, 750, 100, { isStatic: true, angle: Math.PI * 0.06, render: { fillStyle: '#fff' } }),
+    Bodies.rectangle(400, -1500, 750, 100, { isStatic: true, angle: -Math.PI * 0.06, render: { fillStyle: '#fff' } })
   ]);
+
+  // add bumpers
+  Composite.add(world, [
+    Bodies.rectangle(-500, -1000, 100, 1000, { isStatic: true, render: { fillStyle: '#fff' } }),
+    Bodies.rectangle(500, -1000, 100, 1000, { isStatic: true, render: { fillStyle: '#fff' } })
+  ]);
+
+  // add pins
+  Composite.add(world, [
+    Bodies.circle(0, -1000, 75, { isStatic: true, render: { fillStyle: 'white' }} ),
+    Bodies.rectangle(0, -750, 2, 500, { isStatic: true, render: { fillStyle: '#white' } }),
+    Bodies.circle(-250, -750, 75, { isStatic: true, render: { fillStyle: 'white' }} ),
+    Bodies.rectangle(-250, -600, 2, 200, { isStatic: true, render: { fillStyle: '#white' } }),
+    Bodies.circle(250, -750, 75, { isStatic: true, render: { fillStyle: 'white' }} ),
+    Bodies.rectangle(250, -600, 2, 200, { isStatic: true, render: { fillStyle: '#white' } }),
+  ])
 
   // add mouse control
   var mouse = Mouse.create(render.canvas)
@@ -79,8 +114,26 @@ Machine.init = function(name) {
   Render.lookAt(render, Composite.allBodies(world));
 
   // wrapping using matter-wrap plugin
-  for (var i = 0; i < stack.bodies.length; i += 1) {
-    stack.bodies[i].plugin.wrap = {
+  for (var i = 0; i < redStack.bodies.length; i += 1) {
+    redStack.bodies[i].plugin.wrap = {
+      min: { x: render.bounds.min.x, y: render.bounds.min.y },
+      max: { x: render.bounds.max.x, y: render.bounds.max.y }
+    };
+  }
+  for (var i = 0; i < greenStack.bodies.length; i += 1) {
+    greenStack.bodies[i].plugin.wrap = {
+      min: { x: render.bounds.min.x, y: render.bounds.min.y },
+      max: { x: render.bounds.max.x, y: render.bounds.max.y }
+    };
+  }
+  for (var i = 0; i < blueStack.bodies.length; i += 1) {
+    blueStack.bodies[i].plugin.wrap = {
+      min: { x: render.bounds.min.x, y: render.bounds.min.y },
+      max: { x: render.bounds.max.x, y: render.bounds.max.y }
+    };
+  }
+  for (var i = 0; i < yellowStack.bodies.length; i += 1) {
+    yellowStack.bodies[i].plugin.wrap = {
       min: { x: render.bounds.min.x, y: render.bounds.min.y },
       max: { x: render.bounds.max.x, y: render.bounds.max.y }
     };
