@@ -51,7 +51,7 @@
       </header>
     </div>
   </div>
-  <div style="border: 1em solid #333; background: #000; margin: 0 3em;">
+  <div style="border: 1px solid #fff; background: #000; margin: 0 3em;">
     <div class="entropy">
       <Machine bind:machine={machine} />
     </div>
