@@ -3,7 +3,7 @@
     <ul class="left">
       <li><a href="/balls">Balls</a></li>
       <li><a href="/spray">Spray</a></li>
-      <li><a href="/detectors">Detectors</a></li>
+      <li><a href="/fair-bounce">Fair Bounce</a></li>
     </ul>
     <a href="/" class="brand-logo center">Stream</a>
     <ul class="right">
