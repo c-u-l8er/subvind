@@ -1,15 +1,13 @@
-<nav>
+<nav id="main-header">
   <div class="nav-wrapper">
     <ul class="left">
-      <li><a href="/balls">Balls</a></li>
-      <li><a href="/spray">Spray</a></li>
-      <li><a href="/fair-bounce">Fair Bounce</a></li>
+      <li><a href="/sounds#main-header">Sounds</a></li>
+      <li><a href="/songs#main-header">Songs</a></li>
+      <li><a href="/mixer#main-header">Mixer</a></li>
     </ul>
-    <a href="/" class="brand-logo center">Stream</a>
+    <a href="/#main-header" class="brand-logo center">Live Broadcast</a>
     <ul class="right">
-      <li><a href="/api">API</a></li>
-      <li><a href="/settings">Settings</a></li>
-      <li><a href="/about">About</a></li>
+      <li><a href="/recordings#main-header">Recordings</a></li>
     </ul>
   </div>
 </nav>

@@ -1,37 +1,50 @@
 <script lang="ts">
-  import Header from "../components/Header.svelte";
 </script>
 
-<Header />
-<div class="max-entropy">
-  <h4>If you had to predict the next ball to be recorded from one of the grey detectors what is the minimum number of yes or no questions you would expect to ask?</h4>
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="contain">
+  <h1>Discord</h1>
+  <h5>Community <a href="https://discord.com/channels/1005573436032159744/1005573436032159748" target="_blank">messaging and chat</a> shoutbox:</h5>
+  <br />
 </div>
-
-<div class="content">
-
+<div class="wrap">
+  <iframe id="discord" src="https://e.widgetbot.io/channels/1005573436032159744/1005573436032159748"></iframe>
 </div>
-
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<br /> 
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <style>
-  .content {
-    padding: 2em;
+  .contain {
+    max-width: 1000px;
+    margin: 0 auto;
   }
-
-  .max-entropy {
-    padding: 1em;
-    color: #808080;
+  .contain h1,
+  .contain h5 {
     margin: 0;
   }
 
-  .max-entropy h4 {
-    margin: 0;
+  .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 0;
+    background: #000;
+    border: 1em solid #000;
+    position: relative;
   }
 
+  #discord {
+    width: 100%;
+    height: 100vh;
+    max-height: 800px;
+    padding: 0;
+    border: 0;
+    margin-bottom: -0.3em;
+  }
 </style>
