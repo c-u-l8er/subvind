@@ -21,7 +21,7 @@
     float: left;
   }
   .name {
-    font-weight: 900;
+    font-weight: 700;
   }
   .title {
     font-size: 4.7em;
