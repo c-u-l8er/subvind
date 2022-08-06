@@ -5,7 +5,7 @@
       <li><a href="/songs#main-header">Songs</a></li>
       <li><a href="/mixer#main-header">Mixer</a></li>
     </ul>
-    <a href="/#main-header" class="brand-logo center">Live Broadcast</a>
+    <a href="/#main-header" class="brand-logo center">stream.istrav.dev</a>
     <ul class="right">
       <li><a href="/recordings#main-header">Recordings</a></li>
     </ul>
