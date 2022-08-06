@@ -12,7 +12,7 @@
   <br />
 </div>
 <div class="wrap">
-  <iframe id="discord" src="https://e.widgetbot.io/channels/1005573436032159744/1005573436032159748"></iframe>
+  <iframe title="discord" id="discord" src="https://e.widgetbot.io/channels/1005573436032159744/1005573436032159748"></iframe>
 </div>
 <br />
 <br />

@@ -5,6 +5,7 @@
   import Library from '../machine/index'
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
+  import Subscribe from "../components/Subscribe.svelte";
 
   let machine: any
 
@@ -78,6 +79,13 @@
 <main>
   <slot />
 </main>
+
+<Subscribe />
+
+<br />
+<br />
+<br />
+<br />
 
 <Footer />
 
