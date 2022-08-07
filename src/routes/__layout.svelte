@@ -63,6 +63,9 @@
     <div class="reports">
       <div class="max-entropy">
         <h4>If you had to predict the next ball to be recorded from one of the grey detectors what is the minimum number of yes or no questions you would expect to ask?</h4>
+        <div style="text-align: center; height: 0.2em;">
+          <a href="#!" class="btn btn-large btn-floating"><i class="material-icons">videogame_asset</i></a>
+        </div>
       </div>    
     </div>
   </div>

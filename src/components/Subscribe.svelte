@@ -24,10 +24,11 @@
     font-weight: 700;
   }
   .title {
-    font-size: 4.7em;
+    font-size: 4.6em;
     color: #ee6e73;
     margin: 0;
-    line-height: 1em;
+    line-height: 0.9em;
+    margin-bottom: 0.1em;
   }
   .box {
     border: 1em solid #ee6e73;
