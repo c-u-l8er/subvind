@@ -5,7 +5,7 @@
 <div class="border"></div>
 <div style="max-width: 1000px; margin: 0 auto;">
   <div class="box">
-    <a href="https://www.youtube.com/c/Traveco504" target="_blank" class="btn btn-large right controls">YOUTUBE</a>
+    <a href="https://www.youtube.com/user/Traveco504" target="_blank" class="btn btn-large right controls">YOUTUBE</a>
     <h1 class="title"><i class="material-icons badge">videocam</i><div class="name">Subscribe</div></h1>
   </div>
 </div>
