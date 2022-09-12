@@ -8,7 +8,7 @@
 <br />
 <div class="contain">
   <h1>Discord</h1>
-  <h5>Community <a href="https://discord.com/channels/1005573436032159744/1005573436032159748" target="_blank">messaging and chat</a> shoutbox:</h5>
+  <h5>Community <a href="https://discord.gg/27dBhn3zuc" target="_blank">messaging and chat</a> shoutbox:</h5>
   <br />
 </div>
 <div class="wrap">
