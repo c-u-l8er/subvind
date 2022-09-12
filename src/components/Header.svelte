@@ -1,10 +1,9 @@
 <nav id="main-header">
   <div class="nav-wrapper">
     <ul class="left">
-      <li><a href="/sounds#main-header">Sounds</a></li>
-      <li><a href="/songs#main-header">Songs</a></li>
-      <li><a href="/mixer#main-header">Mixer</a></li>
-      <li><a href="/recordings#main-header">Recordings</a></li>
+      <li><a href="/water#main-header">Water</a></li>
+      <li><a href="/traffic#main-header">Traffic</a></li>
+      <li><a href="/people#main-header">People</a></li>
     </ul>
     <a href="/#main-header" class="brand-logo center">stream.istrav.dev</a>
     <ul class="right">
