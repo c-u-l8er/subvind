@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
+  import Logo from '../components/Logo.svelte'
   import Machine from '../components/Machine.svelte'
   import Library from '../machine/index'
   import Header from "../components/Header.svelte";
@@ -41,6 +42,9 @@
 <div class="motherboard">
   <br />
   <br />
+
+  <Logo />
+
   <div class="case">
     <div class="control-panel">
       <div class="content">
