@@ -34,7 +34,7 @@
 </script>
 
 <svelte:head>
-  <title>isTrav Stream: Continuous flows of information.</title>
+  <title>isTrav Stream: One continuous flow of information.</title>
   <meta name="description" content="This entropy machine runs within a javascript physics engine which is a game loop that bounces balls around outputting randomness. This unpredictability is used in other repos for sending encrypted messages by mixing data before it gets sent over insecure channels and then within another safe space we unmix it to get back the original data." />
 </svelte:head>
 
@@ -51,7 +51,7 @@
         </div>
         <header>
           <h1>isTrav Stream</h1>
-          <h2>Continuous flows of information.</h2>
+          <h2>One continuous flow of information.</h2>
         </header>
       </div>
     </div>
