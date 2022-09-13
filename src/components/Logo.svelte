@@ -1,6 +1,6 @@
 
 <div class="anchor">
-  <a href="/">
+  <a href="https://istrav.com">
     <img src="./anchor.png" alt="isTrav" />
   </a>
 </div>
