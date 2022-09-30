@@ -1,4 +1,4 @@
-istrav.stream
+istrav.live
 ========
 Innovation Management Software (IMS)
 
@@ -11,9 +11,9 @@ istrav source code:
 - istrav-load-balancer: https://github.com/trabur/istrav-load-balancer
 - istrav.dev: https://github.com/trabur/istrav.dev
 - istrav-headquarters: https://github.com/trabur/istrav-headquarters
-- istrav.stream: https://github.com/trabur/istrav.stream
+- istrav.live: https://github.com/trabur/istrav.live
 
-istrav.stream tech:
+istrav.live tech:
 - materializecss
 - matter.js
 
