@@ -10,6 +10,7 @@
           <li><a href={`https://istrav.com`}>Website</a></li>
           <li><a href={`https://istrav.net`}>Community</a></li>
           <li><a href={`https://istrav.dev`}>Headquarters</a></li>
+          <li><a href={`https://istrav.info`}>Information</a></li>
         </ul>
       </div>
     </div>
