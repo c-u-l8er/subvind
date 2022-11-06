@@ -23,6 +23,7 @@ Machine.init = function(name) {
   var MouseConstraint = Matter.MouseConstraint;
   var Mouse = Matter.Mouse;
   var Bodies = Matter.Bodies;
+  var Events = Matter.Events;
 
   // create engine
   var engine = Engine.create();
@@ -46,24 +47,64 @@ Machine.init = function(name) {
   var runner = Runner.create();
   Runner.run(runner, engine);
 
+  // define our categories (as bit fields, there are up to 32 available)
+  var defaultCategory = 0x0001;
+  var firstSensorCategory = 0x0002;
+  var secondSensorCategory = 0x0003;
+  var thirdSensorCategory = 0x0004;
+  var fourthSensorCategory = 0x0005;
+  var ballsCategory = 0x0006;
+
   // add red circles
   var redStack = Composites.stack(-650, -2000, 5, 5, 10, 10, function(x, y) {
-    return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'red' } });
+    return Bodies.circle(x, y, 10, 
+      { 
+        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'red' },
+        collisionFilter: {
+          category: ballsCategory,
+          mask: defaultCategory | ballsCategory
+        }
+      },
+    );
   });
 
   // add green circles
   var greenStack = Composites.stack(-350, -2000, 5, 5, 10, 10, function(x, y) {
-    return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'green' } });
+    return Bodies.circle(x, y, 10,
+      { 
+        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'green' },
+        collisionFilter: {
+          category: ballsCategory,
+          mask: defaultCategory | ballsCategory
+        }
+      },
+    );
   });
 
   // add blue circles
   var blueStack = Composites.stack(200, -2000, 5, 5, 10, 10, function(x, y) {
-    return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'blue' } });
+    return Bodies.circle(x, y, 10,
+      {
+        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'blue' },
+        collisionFilter: {
+          category: ballsCategory,
+          mask: defaultCategory | ballsCategory
+        }
+      },
+    );
   });
 
   // add yellow circles
   var yellowStack = Composites.stack(500, -2000, 5, 5, 10, 10, function(x, y) {
-    return Bodies.circle(x, y, 10, { friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'yellow' } });
+    return Bodies.circle(x, y, 10,
+      { 
+        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'yellow' },
+        collisionFilter: {
+          category: ballsCategory,
+          mask: defaultCategory | ballsCategory
+        }
+      }
+    );
   });
 
   // apply stacks of circles
@@ -74,25 +115,135 @@ Machine.init = function(name) {
   
   // add hole shot
   Composite.add(world, [
-    Bodies.rectangle(-400, -1500, 750, 100, { isStatic: true, angle: Math.PI * 0.06, render: { fillStyle: '#fff' } }),
-    Bodies.rectangle(400, -1500, 750, 100, { isStatic: true, angle: -Math.PI * 0.06, render: { fillStyle: '#fff' } })
+    Bodies.rectangle(-400, -1500, 750, 100, 
+      {
+        isStatic: true, angle: Math.PI * 0.06, render: { fillStyle: '#fff' },
+        collisionFilter: {
+          category: defaultCategory
+        },
+      },
+    ),
+    Bodies.rectangle(400, -1500, 750, 100,
+      { 
+        isStatic: true, angle: -Math.PI * 0.06, render: { fillStyle: '#fff' },
+        collisionFilter: {
+          category: defaultCategory
+        },
+      },
+    )
   ]);
 
   // add bumpers
   Composite.add(world, [
-    Bodies.rectangle(-500, -1000, 100, 1000, { isStatic: true, render: { fillStyle: '#fff' } }),
-    Bodies.rectangle(500, -1000, 100, 1000, { isStatic: true, render: { fillStyle: '#fff' } })
+    Bodies.rectangle(-500, -1000, 100, 1000,
+      {
+        isStatic: true, render: { fillStyle: '#fff' },
+        collisionFilter: {
+          category: defaultCategory
+        }
+      },
+    ),
+    Bodies.rectangle(500, -1000, 100, 1000, 
+      { 
+        isStatic: true, render: { fillStyle: '#fff' },
+        collisionFilter: {
+          category: defaultCategory
+        }
+      },
+    )
   ]);
 
   // add pins
   Composite.add(world, [
-    Bodies.circle(0, -1000, 75, { isStatic: true, render: { fillStyle: 'white' }} ),
-    Bodies.rectangle(0, -750, 2, 500, { isStatic: true, render: { fillStyle: '#white' } }),
-    Bodies.circle(-250, -750, 75, { isStatic: true, render: { fillStyle: 'white' }} ),
-    Bodies.rectangle(-250, -600, 2, 200, { isStatic: true, render: { fillStyle: '#white' } }),
-    Bodies.circle(250, -750, 75, { isStatic: true, render: { fillStyle: 'white' }} ),
-    Bodies.rectangle(250, -600, 2, 200, { isStatic: true, render: { fillStyle: '#white' } }),
+    Bodies.circle(0, -1000, 75, { isStatic: true, render: { fillStyle: 'white' }, collisionFilter: { category: defaultCategory } }),
+    Bodies.rectangle(0, -750, 2, 500, { isStatic: true, render: { fillStyle: '#white' }, collisionFilter: { category: defaultCategory } }),
+    Bodies.circle(-250, -750, 75, { isStatic: true, render: { fillStyle: 'white' }, collisionFilter: { category: defaultCategory } }),
+    Bodies.rectangle(-250, -600, 2, 200, { isStatic: true, render: { fillStyle: '#white' }, collisionFilter: { category: defaultCategory } }),
+    Bodies.circle(250, -750, 75, { isStatic: true, render: { fillStyle: 'white' }, collisionFilter: { category: defaultCategory } }),
+    Bodies.rectangle(250, -600, 2, 200, { isStatic: true, render: { fillStyle: '#white' }, collisionFilter: { category: defaultCategory } }),
   ])
+
+  // add sensors
+  let one = Bodies.rectangle(-351, -525, 195, 50,
+    { 
+      label: 'one',
+      isStatic: true, isSensor: true, render: { fillStyle: '#666' },
+      collisionFilter: {
+        category: firstSensorCategory,
+        mask: ballsCategory
+      }
+    }
+  )
+  let two = Bodies.rectangle(-125, -525, 245, 50, 
+    { 
+      isStatic: true, isSensor: true, render: { fillStyle: '#666' },
+      collisionFilter: {
+        category: secondSensorCategory,
+        mask: ballsCategory
+      }
+    },
+  )
+  let three = Bodies.rectangle(125, -525, 245, 50, 
+    { 
+      isStatic: true, isSensor: true, render: { fillStyle: '#666' },
+      collisionFilter: {
+        category: secondSensorCategory,
+        mask: ballsCategory
+      }
+    },
+  )
+  let four = Bodies.rectangle(351, -525, 195, 50, 
+    { 
+      isStatic: true, isSensor: true, render: { fillStyle: '#666' },
+      collisionFilter: {
+        category: secondSensorCategory,
+        mask: ballsCategory
+      }
+    },
+  )
+  Composite.add(world, [one, two, three, four])
+
+  // detect balls that cross over sensors
+  Events.on(engine, 'collisionStart', function(event) {
+    var pairs = event.pairs;
+
+    let sensors = pairs.filter((value, index) => {
+      if (value.bodyB === one || value.bodyB === two || value.bodyB === three || value.bodyB === four) {
+        return true
+      } else {
+        return false
+      }
+    })
+
+    // change object colours to show those starting a collision
+    for (var i = 0; i < sensors.length; i++) {
+      var sensor = sensors[i];
+
+      let position
+      if (sensor.bodyB === one) {
+        position = 1
+      } else if (sensor.bodyB === two) {
+        position = 2
+      } else if (sensor.bodyB === three) {
+        position = 3
+      } else if (sensor.bodyB === four) {
+        position = 4
+      }
+
+      let color
+      if (sensor.bodyA.render.fillStyle === 'red') {
+        color = 'R'
+      } else if (sensor.bodyA.render.fillStyle === 'green') {
+        color = 'G'
+      } else if (sensor.bodyA.render.fillStyle === 'blue') {
+        color = 'B'
+      } else if (sensor.bodyA.render.fillStyle === 'yellow') {
+        color = 'Y'
+      }
+
+      console.log(position, color)
+    }
+  });
 
   // add mouse control
   var mouse = Mouse.create(render.canvas)
@@ -106,7 +257,7 @@ Machine.init = function(name) {
       }
     });
 
-  // disable mouse croll
+  // disable mouse scroll
   mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
   mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
 
