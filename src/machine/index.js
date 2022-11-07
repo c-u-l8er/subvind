@@ -1,7 +1,9 @@
 // @ts-nocheck
 var Machine = Machine || {};
 
-Machine.init = function(name) {
+Machine.init = function(name, environment) {
+  console.log('environment', environment)
+
   try {
     if (typeof MatterWrap !== 'undefined') {
       // either use by name from plugin registry (Browser global)
@@ -56,10 +58,15 @@ Machine.init = function(name) {
   var ballsCategory = 0x0006;
 
   // add red circles
-  var redStack = Composites.stack(-650, -2000, 5, 5, 10, 10, function(x, y) {
+  let redCount = 0
+  let t = environment.t.count / 5
+  let T = environment.t.color
+  var redStack = Composites.stack(-650, -2000, 5, t, 10, 10, function(x, y) {
+    redCount++
     return Bodies.circle(x, y, 10, 
       { 
-        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'red' },
+        label: redCount,
+        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: T },
         collisionFilter: {
           category: ballsCategory,
           mask: defaultCategory | ballsCategory
@@ -69,10 +76,15 @@ Machine.init = function(name) {
   });
 
   // add green circles
-  var greenStack = Composites.stack(-350, -2000, 5, 5, 10, 10, function(x, y) {
+  let greenCount = 0
+  let c = environment.c.count / 5
+  let C = environment.c.color
+  var greenStack = Composites.stack(-350, -2000, 5, c, 10, 10, function(x, y) {
+    greenCount++
     return Bodies.circle(x, y, 10,
       { 
-        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'green' },
+        label: redCount + greenCount,
+        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: C },
         collisionFilter: {
           category: ballsCategory,
           mask: defaultCategory | ballsCategory
@@ -82,10 +94,15 @@ Machine.init = function(name) {
   });
 
   // add blue circles
-  var blueStack = Composites.stack(200, -2000, 5, 5, 10, 10, function(x, y) {
+  let blueCount = 0
+  let g = environment.g.count / 5
+  let G = environment.g.color
+  var blueStack = Composites.stack(200, -2000, 5, g, 10, 10, function(x, y) {
+    blueCount++
     return Bodies.circle(x, y, 10,
       {
-        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'blue' },
+        label: redCount + greenCount + blueCount,
+        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: G },
         collisionFilter: {
           category: ballsCategory,
           mask: defaultCategory | ballsCategory
@@ -95,10 +112,15 @@ Machine.init = function(name) {
   });
 
   // add yellow circles
-  var yellowStack = Composites.stack(500, -2000, 5, 5, 10, 10, function(x, y) {
+  let yellowCount = 0
+  let a = environment.a.count / 5
+  let A = environment.a.color
+  var yellowStack = Composites.stack(500, -2000, 5, a, 10, 10, function(x, y) {
+    yellowCount++
     return Bodies.circle(x, y, 10,
       { 
-        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: 'yellow' },
+        label: redCount + greenCount + blueCount + yellowCount,
+        friction: 0.00001, restitution: 0.5, density: 0.001, render: { fillStyle: A },
         collisionFilter: {
           category: ballsCategory,
           mask: defaultCategory | ballsCategory
@@ -165,8 +187,7 @@ Machine.init = function(name) {
 
   // add sensors
   let one = Bodies.rectangle(-351, -525, 195, 50,
-    { 
-      label: 'one',
+    {
       isStatic: true, isSensor: true, render: { fillStyle: '#666' },
       collisionFilter: {
         category: firstSensorCategory,
@@ -203,6 +224,9 @@ Machine.init = function(name) {
   )
   Composite.add(world, [one, two, three, four])
 
+  // collect reports for statistics
+  let stats = []
+
   // detect balls that cross over sensors
   Events.on(engine, 'collisionStart', function(event) {
     var pairs = event.pairs;
@@ -231,17 +255,20 @@ Machine.init = function(name) {
       }
 
       let color
-      if (sensor.bodyA.render.fillStyle === 'red') {
-        color = 'R'
-      } else if (sensor.bodyA.render.fillStyle === 'green') {
-        color = 'G'
-      } else if (sensor.bodyA.render.fillStyle === 'blue') {
-        color = 'B'
-      } else if (sensor.bodyA.render.fillStyle === 'yellow') {
-        color = 'Y'
+      if (sensor.bodyA.render.fillStyle === T) {
+        color = T
+      } else if (sensor.bodyA.render.fillStyle === C) {
+        color = C
+      } else if (sensor.bodyA.render.fillStyle === G) {
+        color = G
+      } else if (sensor.bodyA.render.fillStyle === A) {
+        color = A
       }
+      
+      let ball = sensor.bodyA.label
 
-      console.log(position, color)
+      let report = { position, color, ball }
+      stats.push(report)
     }
   });
 
@@ -314,6 +341,28 @@ Machine.init = function(name) {
     pause: function() {
       Matter.Render.stop(render);
       Matter.Runner.stop(runner);
+    },
+    stats: function() {
+      let report = JSON.parse(JSON.stringify(stats)) // copy
+      stats = [] // keep memory clean
+      return report
+      // return [
+      //   {
+      //     sensor: 4,
+      //     color: 'red',
+      //     ball: 1
+      //   },
+      //   {
+      //     sensor: 2,
+      //     color: 'red',
+      //     ball: 2
+      //   },
+      //   {
+      //     sensor: 1,
+      //     color: 'green',
+      //     ball: 3
+      //   },
+      // ]
     }
   };
 };

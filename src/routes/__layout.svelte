@@ -7,11 +7,75 @@
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
   import Subscribe from "../components/Subscribe.svelte";
+  import Spoiler from "../components/Spoiler.svelte";
 
+  let spoiler: boolean = false
   let machine: any
+  let stats: any = []
+  let environmentIndex = 0
+  let environments: any = [
+    {
+      t: { color: 'red', count: 25 },
+      c: { color: 'green', count: 25 },
+      g: { color: 'blue', count: 25 },
+      a: { color: 'yellow', count: 25 }
+    },
+    {
+      t: { color: 'red', count: 25 },
+      c: { color: 'red', count: 25 },
+      g: { color: 'blue', count: 25 },
+      a: { color: 'blue', count: 25 }
+    },
+    {
+      t: { color: 'red', count: 25 },
+      c: { color: 'blue', count: 25 },
+      g: { color: 'red', count: 25 },
+      a: { color: 'blue', count: 25 }
+    },
+    {
+      t: { color: 'red', count: 25 },
+      c: { color: 'red', count: 25 },
+      g: { color: 'blue', count: 0 },
+      a: { color: 'blue', count: 50 }
+    },
+    {
+      t: { color: 'red', count: 0 },
+      c: { color: 'red', count: 50 },
+      g: { color: 'blue', count: 50 },
+      a: { color: 'blue', count: 0 }
+    },
+    {
+      t: { color: 'red', count: 50 },
+      c: { color: 'red', count: 0 },
+      g: { color: 'blue', count: 0 },
+      a: { color: 'blue', count: 50 }
+    },
+    {
+      t: { color: 'red', count: 10 },
+      c: { color: 'white', count: 40 },
+      g: { color: 'white', count: 40 },
+      a: { color: 'blue', count: 10 }
+    },
+    {
+      t: { color: 'white', count: 40 },
+      c: { color: 'red', count: 10 },
+      g: { color: 'blue', count: 10 },
+      a: { color: 'white', count: 40 }
+    },
+  ]
 
   onMount(() => {
-    //
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, {
+      alignment: 'right'
+    });
+
+    setInterval(() => {
+      let report = machine.stats()
+      console.log(report) // information entropy stream
+      stats.push(...report)
+      process()
+    }, 1000)
   })
 
   function stop (e: any) {
@@ -19,7 +83,7 @@
     machine.stop()
     let el: any = document.getElementById("entropy")
     el.innerHTML = "";
-    machine = Library.init('entropy')
+    machine = Library.init('entropy', environments[environmentIndex])
     setTimeout(() => {
       machine.stop()
     }, 0)
@@ -31,6 +95,20 @@
   function pause (e: any) {
     e.preventDefault()
     machine.pause()
+  }
+  function change (e: any, index: any) {
+    e.preventDefault()
+    environmentIndex = index // update
+    machine.stop()
+    let el: any = document.getElementById("entropy")
+    el.innerHTML = "";
+    machine = Library.init('entropy', environments[environmentIndex])
+    setTimeout(() => {
+      machine.stop()
+    }, 0)
+  }
+  function process () {
+
   }
 </script>
 
@@ -52,6 +130,19 @@
           <a href="#!" class="btn btn-large" on:click={(e) => start(e)}><i class="material-icons">play_arrow</i></a>
           <a href="#!" class="btn btn-large" on:click={(e) => pause(e)}><i class="material-icons">pause</i></a>
           <a href="#!" class="btn btn-large" on:click={(e) => stop(e)}><i class="material-icons">stop</i></a>
+          <a href="#!" class="btn btn-large dropdown-trigger" data-target="dropdown1"><i class="material-icons">more_horiz</i></a>
+          <ul id='dropdown1' class='dropdown-content' style="min-width: 250px;">
+            <li><a href="#!" on:click={(e) => change(e, 0)}>RGBY (Fair Bounce)</a></li>
+            <li><a href="#!" on:click={(e) => change(e, 1)}>Red or Blue (Fair Bounce)</a></li>
+            <li><a href="#!" on:click={(e) => change(e, 2)}>Red and Blue (Favor Bounce)</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" on:click={(e) => change(e, 3)}>Leaning (25:25:0:50)</a></li>
+            <li><a href="#!" on:click={(e) => change(e, 4)}>Center (0:50:50:0)</a></li>
+            <li><a href="#!" on:click={(e) => change(e, 5)}>Extreme (50:0:0:50)</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" on:click={(e) => change(e, 6)}>Inside Wins (10:40:40:10)</a></li>
+            <li><a href="#!" on:click={(e) => change(e, 7)}>Outside Wins (40:10:10:40)</a></li>
+          </ul>
         </div>
         <header>
           <h1>isTrav Live</h1>
@@ -61,14 +152,17 @@
     </div>
     <div style="border: 1px solid #fff; background: #000; margin: 0 3em;">
       <div class="entropy">
-        <Machine bind:machine={machine} />
+        <Machine bind:machine={machine} bind:environment={environments[environmentIndex]} />
       </div>
     </div>
     <div class="reports">
       <div class="max-entropy">
         <h4>If you had to predict the next ball to be recorded from one of the grey detectors what is the minimum number of yes or no questions you would expect to ask?</h4>
+        {#if spoiler}
+          <Spoiler />
+        {/if}
         <div style="text-align: center; height: 0.2em;">
-          <a href="#!" class="btn btn-large btn-floating"><i class="material-icons">videogame_asset</i></a>
+          <button on:click={() => {spoiler = !spoiler}} class="btn btn-large btn-floating"><i class="material-icons">videogame_asset</i></button>
         </div>
       </div>    
     </div>

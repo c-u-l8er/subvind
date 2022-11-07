@@ -4,12 +4,13 @@
   import Library from '../machine/index'
 
   export let machine: any
+  export let environment: any
   
   onMount(() => {
     Matter.use(
       'matter-wrap'
     );
-    machine = Library.init('entropy')
+    machine = Library.init('entropy', environment)
     setTimeout(() => {
       machine.stop()
     }, 0)
