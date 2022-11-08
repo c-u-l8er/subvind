@@ -8,7 +8,19 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+
+		// // Override http methods in the Todo forms
+		// methodOverride: {
+		// 	allowed: ['PATCH', 'DELETE']
+		// },
+    // vite: {
+    //   resolve: {
+    //     alias: {
+    //       'node-fetch': 'isomorphic-fetch',
+    //     },
+    //   },
+    // },
 	}
 };
 

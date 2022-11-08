@@ -1,13 +1,13 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  import Logo from '../components/Logo.svelte'
-  import Machine from '../components/Machine.svelte'
+  import Logo from '$lib/Logo.svelte'
+  import Machine from '$lib/Machine.svelte'
   import Library from '../machine/index'
-  import Header from "../components/Header.svelte";
-  import Footer from "../components/Footer.svelte";
-  import Subscribe from "../components/Subscribe.svelte";
-  import Spoiler from "../components/Spoiler.svelte";
+  import Header from "$lib/Header.svelte";
+  import Footer from "$lib/Footer.svelte";
+  import Subscribe from "$lib/Subscribe.svelte";
+  import Spoiler from "$lib/Spoiler.svelte";
 
   let spoiler: boolean = false
   let machine: any
