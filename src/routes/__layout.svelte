@@ -157,12 +157,11 @@
     </div>
     <div class="reports">
       <div class="max-entropy">
-        <h4>If you had to predict the next ball to be recorded from one of the grey detectors what is the minimum number of yes or no questions you would expect to ask?</h4>
         {#if spoiler}
-          <Spoiler />
+          <Spoiler bind:stats={stats} />
         {/if}
         <div style="text-align: center; height: 0.2em;">
-          <button on:click={() => {spoiler = !spoiler}} class="btn btn-large btn-floating"><i class="material-icons">videogame_asset</i></button>
+          <button on:click={() => {spoiler = !spoiler}} class="btn btn-large btn-floating"><i class="material-icons">all_inclusive</i></button>
         </div>
       </div>    
     </div>
