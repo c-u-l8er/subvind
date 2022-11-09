@@ -268,15 +268,12 @@ Machine.init = function(name, environment) {
       let number = sensor.bodyA.label
       let spin = sensor.bodyA.angle
 
+      let report = { orbit, color, number, spin }
+      stats.push(report)
+
+      // note:
       // sometimes sensors record the same ball twice
       // so force duplicate reports to default on first 
-      let last = stats[stats.length - 1]
-      let report = { orbit, color, number, spin }
-      if (last.number === report.number) {
-        // do nothing
-      } else {
-        stats.push(report)
-      }
     }
   });
 
