@@ -243,15 +243,15 @@ Machine.init = function(name, environment) {
     for (var i = 0; i < sensors.length; i++) {
       var sensor = sensors[i];
 
-      let position
+      let orbit
       if (sensor.bodyB === one) {
-        position = 1
+        orbit = 0
       } else if (sensor.bodyB === two) {
-        position = 2
+        orbit = 1
       } else if (sensor.bodyB === three) {
-        position = 3
+        orbit = 2
       } else if (sensor.bodyB === four) {
-        position = 4
+        orbit = 3
       }
 
       let color
@@ -265,24 +265,32 @@ Machine.init = function(name, environment) {
         color = A
       }
       
-      let ball = sensor.bodyA.label
+      let number = sensor.bodyA.label
+      let spin = sensor.bodyA.angle
 
-      let report = { position, color, ball }
-      stats.push(report)
+      // sometimes sensors record the same ball twice
+      // so force duplicate reports to default on first 
+      let last = stats[stats.length - 1]
+      let report = { orbit, color, number, spin }
+      if (last.number === report.number) {
+        // do nothing
+      } else {
+        stats.push(report)
+      }
     }
   });
 
   // add mouse control
   var mouse = Mouse.create(render.canvas)
   var mouseConstraint = MouseConstraint.create(engine, {
-      mouse: mouse,
-      constraint: {
-        stiffness: 0.2,
-        render: {
-          visible: false
-        }
+    mouse: mouse,
+    constraint: {
+      stiffness: 0.2,
+      render: {
+        visible: false
       }
-    });
+    }
+  });
 
   // disable mouse scroll
   mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
