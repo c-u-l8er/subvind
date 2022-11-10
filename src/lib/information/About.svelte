@@ -33,6 +33,30 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/a_BKQ_ZPImw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </li>
+    <li>
+      <div class="collapsible-header">When does isTrav use randomness for perfect secrecy?</div>
+      <div class="collapsible-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FlIG3TvQCBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">Who is allowed to communicate online securely?</div>
+      <div class="collapsible-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YEBfamv-_do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">Once keys are established how can they be used to scramble messages?</div>
+      <div class="collapsible-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/G2_Q9FoD-oQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">If authorization is successful then how are abilities handled?</div>
+      <div class="collapsible-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cgTa7YnGfHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
   </ul>
 </div>
 
