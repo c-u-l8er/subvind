@@ -1,8 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  export let stats: any
-
   onMount(() => {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems, {});
@@ -36,7 +34,6 @@
       </div>
     </li>
   </ul>
-  {JSON.stringify(stats)}
 </div>
 
 <style>

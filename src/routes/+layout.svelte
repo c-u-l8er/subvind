@@ -158,7 +158,7 @@
     <div class="reports">
       <div class="max-entropy">
         {#if spoiler}
-          <Spoiler bind:stats={stats} />
+          <Spoiler />
         {/if}
         <div style="text-align: center; height: 0.2em;">
           <button on:click={() => {spoiler = !spoiler}} class="btn btn-large btn-floating"><i class="material-icons">all_inclusive</i></button>

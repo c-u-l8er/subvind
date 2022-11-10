@@ -2,26 +2,26 @@
 	"name": "istrav.live",
 	"version": "0.0.1",
 	"scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
-    "svelte": "^3.46.0",
-    "svelte-check": "^2.7.1",
-    "svelte-preprocess": "^4.10.6",
-    "svelte-time": "^0.7.1",
+		"svelte": "^3.46.0",
+		"svelte-check": "^2.7.1",
+		"svelte-preprocess": "^4.10.6",
+		"svelte-time": "^0.7.1",
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.4",
-    "vite": "^3.1.0"
+		"vite": "^3.1.0"
 	},
 	"type": "module",
 	"dependencies": {
-		"layercake": "^7.1.0",
+		"chart.js": "^3.9.1",
 		"matter-js": "^0.18.0",
 		"matter-wrap": "^0.2.0"
 	}

@@ -1,8 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import About from './About.svelte';
-
-  export let stats: any
+  import StackedbarSensor from './sensors/stackedbar/index.svelte';
   
   onMount(() => {
     var elems = document.querySelectorAll('.tabs');
@@ -22,11 +21,11 @@
       </ul>
     </div>
     <div id="test0" class="col s12">
-      <About bind:stats={stats} />
+      <About />
     </div>
     <div id="test1" class="col s12">Test 1</div>
     <div id="test2" class="col s12">Test 2</div>
-    <div id="test3" class="col s12">Test 3</div>
+    <div id="test3" class="col s12"><StackedbarSensor /></div>
     <div id="test4" class="col s12">Test 4</div>
   </div>
 </div>

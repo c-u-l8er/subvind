@@ -1,11 +1,9 @@
 <script lang="ts">
   import Facts from "./information/Facts.svelte"
-
-  export let stats: any
 </script>
 
 <h4>Entropy Machine</h4>
-<Facts bind:stats={stats} />
+<Facts />
 
 <style>
   h4 {
