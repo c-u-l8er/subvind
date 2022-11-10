@@ -267,8 +267,9 @@ Machine.init = function(name, environment) {
       
       let number = sensor.bodyA.label
       let spin = sensor.bodyA.angle
+      let event = new Date()
 
-      let report = { orbit, color, number, spin }
+      let report = { orbit, color, number, spin, event }
       stats.push(report)
 
       // note:
