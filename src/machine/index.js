@@ -186,7 +186,7 @@ Machine.init = function(name, environment) {
   ])
 
   // add sensors
-  let one = Bodies.rectangle(-351, -525, 195, 50,
+  let one = Bodies.rectangle(-351, -525, 180, 50,
     {
       isStatic: true, isSensor: true, render: { fillStyle: '#666' },
       collisionFilter: {
@@ -195,7 +195,7 @@ Machine.init = function(name, environment) {
       }
     }
   )
-  let two = Bodies.rectangle(-125, -525, 245, 50, 
+  let two = Bodies.rectangle(-125, -525, 230, 50, 
     { 
       isStatic: true, isSensor: true, render: { fillStyle: '#666' },
       collisionFilter: {
@@ -204,7 +204,7 @@ Machine.init = function(name, environment) {
       }
     },
   )
-  let three = Bodies.rectangle(125, -525, 245, 50, 
+  let three = Bodies.rectangle(125, -525, 230, 50, 
     { 
       isStatic: true, isSensor: true, render: { fillStyle: '#666' },
       collisionFilter: {
@@ -213,7 +213,7 @@ Machine.init = function(name, environment) {
       }
     },
   )
-  let four = Bodies.rectangle(351, -525, 195, 50, 
+  let four = Bodies.rectangle(351, -525, 180, 50, 
     { 
       isStatic: true, isSensor: true, render: { fillStyle: '#666' },
       collisionFilter: {
