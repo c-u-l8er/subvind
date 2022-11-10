@@ -21,7 +21,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"chart.js": "^3.9.1",
 		"matter-js": "^0.18.0",
 		"matter-wrap": "^0.2.0"
 	}

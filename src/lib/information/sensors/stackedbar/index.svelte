@@ -1,8 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   
-  import Chart from 'chart.js/auto';
-
   onMount(() => {
     const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
