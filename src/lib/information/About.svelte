@@ -69,6 +69,12 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/W2Z7fbCLSTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </li>
+    <li>
+      <div class="collapsible-header">While members cooperate how do they reach consensus in leader elections?</div>
+      <div class="collapsible-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6xwMIYBp944" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
   </ul>
 </div>
 
