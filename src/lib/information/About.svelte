@@ -34,7 +34,7 @@
       </div>
     </li>
     <li>
-      <div class="collapsible-header">When does isTrav use randomness for perfect secrecy?</div>
+      <div class="collapsible-header">When should we use entropy for perfect secrecy?</div>
       <div class="collapsible-body">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/FlIG3TvQCBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
@@ -46,15 +46,27 @@
       </div>
     </li>
     <li>
-      <div class="collapsible-header">Once keys are established how can they be used to scramble messages?</div>
+      <div class="collapsible-header">Once keys/settings are established how are they used to scramble messages?</div>
       <div class="collapsible-body">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/G2_Q9FoD-oQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">For each user in some member's list how are username/passwords kept?</div>
+      <div class="collapsible-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NuyzuNBFWxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </li>
     <li>
       <div class="collapsible-header">If authorization is successful then how are abilities handled?</div>
       <div class="collapsible-body">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/cgTa7YnGfHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">Which of the following DB paradigms is the safest for resource X?</div>
+      <div class="collapsible-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/W2Z7fbCLSTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </li>
   </ul>
