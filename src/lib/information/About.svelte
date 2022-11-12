@@ -52,7 +52,7 @@
       </div>
     </li>
     <li>
-      <div class="collapsible-header">For each user in some member's list how are username/passwords kept?</div>
+      <div class="collapsible-header">For each user in some member's list how are usernames/passwords kept?</div>
       <div class="collapsible-body">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/NuyzuNBFWxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
