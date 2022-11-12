@@ -76,9 +76,15 @@
       </div>
     </li>
     <li>
-      <div class="collapsible-header">Will fake intel mixed in with genuin intel decive adversaries?</div>
+      <div class="collapsible-header">Will fake intel mixed in with genuine intel decive adversaries?</div>
       <div class="collapsible-body">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/CkBjutVRzGM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">After all what is the secret handshake?</div>
+      <div class="collapsible-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OcmvMs4AMbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </li>
   </ul>
