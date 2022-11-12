@@ -2,7 +2,7 @@
   import Facts from "./information/Facts.svelte"
 </script>
 
-<h4>Entropy Machine</h4>
+<h4>Secret Initiation</h4>
 <Facts />
 
 <style>

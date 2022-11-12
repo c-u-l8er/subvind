@@ -258,9 +258,4 @@
     color: #aaa;
     margin: 0;
   }
-
-  .max-entropy h4 {
-    margin: 0;
-    padding: 0;
-  }
 </style>

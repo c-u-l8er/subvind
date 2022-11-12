@@ -58,7 +58,7 @@
       </div>
     </li>
     <li>
-      <div class="collapsible-header">If authorization is successful then how are abilities handled?</div>
+      <div class="collapsible-header">If authentication is successful then how are abilities handled?</div>
       <div class="collapsible-body">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/cgTa7YnGfHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
@@ -73,6 +73,12 @@
       <div class="collapsible-header">While members cooperate how do they reach consensus in leader elections?</div>
       <div class="collapsible-body">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/6xwMIYBp944" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">Will fake intel mixed in with genuin intel decive adversaries?</div>
+      <div class="collapsible-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CkBjutVRzGM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </li>
   </ul>

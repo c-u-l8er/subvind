@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-people
+entropy
 
 <style>
 </style>
