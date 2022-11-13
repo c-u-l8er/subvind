@@ -1,6 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
+  import { v4 as uuidv4 } from 'uuid';
+
+  import backend from '$lib/stores/backend';
+  import live from 'secret-optimizer'
+
   import Logo from '$lib/Logo.svelte'
   import Machine from '$lib/Machine.svelte'
   import Library from '../machine/index'
@@ -64,17 +69,30 @@
     },
   ]
 
+  let loading = true
   onMount(() => {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, {
       alignment: 'right'
     });
 
+		console.log('layout main')
+    backend.set(`https://api.istrav.dev`)
+
+    loading = false
+
+    let database: any
+    setTimeout(async () => {
+      let secretOptimizer = live.SecretOptimizer.getInstance()
+      database = await secretOptimizer.database(live.database.browser)
+    }, 0)
+
     setInterval(() => {
       let report = machine.stats()
-      console.log(report) // information entropy stream
-      stats.push(...report)
-      process()
+      console.log(report) // one continuous flow of information
+      if (report.length) {
+        process(database, report)
+      }
     }, 1000)
   })
 
@@ -83,7 +101,8 @@
     machine.stop()
     let el: any = document.getElementById("entropy")
     el.innerHTML = "";
-    machine = Library.init('entropy', environments[environmentIndex])
+    let term = uuidv4()
+    machine = Library.init('entropy', environments[environmentIndex], term)
     setTimeout(() => {
       machine.stop()
     }, 0)
@@ -102,13 +121,22 @@
     machine.stop()
     let el: any = document.getElementById("entropy")
     el.innerHTML = "";
-    machine = Library.init('entropy', environments[environmentIndex])
+    let term = uuidv4()
+    machine = Library.init('entropy', environments[environmentIndex], term)
     setTimeout(() => {
       machine.stop()
     }, 0)
   }
-  function process () {
-
+  async function process (db: any, report: any) {
+    await db.oneTimePads.insert({
+      id: uuidv4(),
+      term: report.term,
+      orbit: report.orbit,
+      color: report.color,
+      number: report.number,
+      spin: report.spin,
+      event: report.event,
+    })
   }
 </script>
 

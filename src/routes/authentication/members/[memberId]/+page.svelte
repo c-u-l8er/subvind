@@ -3,7 +3,7 @@
 
   import live from 'secret-optimizer'
 
-  let members: any
+  let member: any
   export let data: any;
   let loading: boolean = true
 
@@ -11,15 +11,15 @@
 
     let secretOptimizer = live.SecretOptimizer.getInstance()
     let db = await secretOptimizer.db()
-    members = await db.members.find({
+    member = await db.members.findOne({
       selector: {
         id: data.memberId
       }
     }).exec()
-    console.dir(members)
+    console.dir(member)
     loading = false
 
   })
 </script>
 
-members
+member {member}

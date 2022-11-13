@@ -1,7 +1,7 @@
 // @ts-nocheck
 var Machine = Machine || {};
 
-Machine.init = function(name, environment) {
+Machine.init = function(name, environment, term) {
   console.log('environment', environment)
 
   try {
@@ -269,12 +269,8 @@ Machine.init = function(name, environment) {
       let spin = sensor.bodyA.angle
       let event = new Date()
 
-      let report = { orbit, color, number, spin, event }
+      let report = { term, orbit, color, number, spin, event }
       stats.push(report)
-
-      // note:
-      // sometimes sensors record the same ball twice
-      // so force duplicate reports to default on first 
     }
   });
 

@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
 
   import Library from '../machine/index'
+  import { v4 as uuidv4 } from 'uuid';
 
   export let machine: any
   export let environment: any
@@ -10,7 +11,8 @@
     Matter.use(
       'matter-wrap'
     );
-    machine = Library.init('entropy', environment)
+    let term = uuidv4()
+    machine = Library.init('entropy', environment, term)
     setTimeout(() => {
       machine.stop()
     }, 0)
