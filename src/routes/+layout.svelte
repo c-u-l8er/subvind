@@ -14,6 +14,8 @@
   import Subscribe from "$lib/Subscribe.svelte";
   import Spoiler from "$lib/Spoiler.svelte";
 
+  let database: any
+  let term: any
   let spoiler: boolean = false
   let machine: any
   let stats: any = []
@@ -81,7 +83,6 @@
 
     loading = false
 
-    let database: any
     setTimeout(async () => {
       let secretOptimizer = live.SecretOptimizer.getInstance()
       database = await secretOptimizer.database(live.database.browser)
@@ -101,8 +102,10 @@
     machine.stop()
     let el: any = document.getElementById("entropy")
     el.innerHTML = "";
-    let term = uuidv4()
-    machine = Library.init('entropy', environments[environmentIndex], term)
+    term = uuidv4()
+    let settings = environments[environmentIndex]
+    machine = Library.init('entropy', settings, term)
+    initiate(term, settings)
     setTimeout(() => {
       machine.stop()
     }, 0)
@@ -121,14 +124,16 @@
     machine.stop()
     let el: any = document.getElementById("entropy")
     el.innerHTML = "";
-    let term = uuidv4()
-    machine = Library.init('entropy', environments[environmentIndex], term)
+    term = uuidv4()
+    let settings = environments[environmentIndex]
+    machine = Library.init('entropy', settings, term)
+    initiate(term, settings)
     setTimeout(() => {
       machine.stop()
     }, 0)
   }
-  async function process (db: any, report: any) {
-    await db.oneTimePads.insert({
+  async function process (report: any) {
+    await database.oneTimePads.insert({
       id: uuidv4(),
       term: report.term,
       orbit: report.orbit,
@@ -136,6 +141,19 @@
       number: report.number,
       spin: report.spin,
       event: report.event,
+    })
+  }
+  async function initiate (id: string, environment: any) {
+    await database.terms.insert({
+      id: id,
+      tColor: environment.t.color,
+      cColor: environment.c.color,
+      gColor: environment.g.color,
+      aColor: environment.a.color,
+      tCount: environment.t.count,
+      cCount: environment.c.count,
+      gCount: environment.g.count,
+      aCount: environment.a.count
     })
   }
 </script>
