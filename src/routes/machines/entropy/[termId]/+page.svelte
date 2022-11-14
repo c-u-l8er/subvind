@@ -58,21 +58,25 @@
   let records: any = []
 
   onMount(async () => {
+    await load()
+  })
+
+  async function load () {
     let secretOptimizer = live.SecretOptimizer.getInstance()
     let db = await secretOptimizer.db()
 
-    setInterval(async () => {
-      oneTimePads = await db.oneTimePads.find({
-        selector: {
-          term: data.termId
-        },
-        sort: [
-          { event: 'asc' }
-        ]
-      }).exec()
+    oneTimePads = await db.oneTimePads.find({
+      selector: {
+        term: data.termId
+      },
+      sort: [
+        { event: 'asc' }
+      ]
+    }).exec()
 
-      console.log('oneTimePads',oneTimePads)
-      
+    // needed in both areas
+    records = []
+    setTimeout(() => {
       records = []
       oneTimePads.forEach((value: any) => {
         let record = {
@@ -86,8 +90,8 @@
         }
         records.push(record)
       })
-    }, 10000)
-  })
+    }, 0)
+  }
 </script>
 
 <Banner icon="theaters" name="One Time Pads" description="Innovation Management System">
@@ -95,10 +99,12 @@
   <a href="/machines/entropy#main-header" class="breadcrumb">Entropy</a>
   <a href="#main-header" class="breadcrumb">{data.termId}</a>
 </Banner>
-<br />
-<br />
-<br />
+
 <div class="container">
+  <a href="#main-header" class="btn-floating btn-large red lighten-2 waves-effect waves-light right refresh" on:click={async () => {await load(); M.toast({html: 'Update success!'});}}><i class="material-icons">refresh</i></a>
+  <br />
+  <br />
+  <br />
   {#if records.length}
     <Table columns={columns} data={records} search={search} pagination={pagination} sort={sort} />
   {/if}
@@ -106,3 +112,9 @@
 <br />
 <br />
 <br />
+
+<style>
+  .refresh {
+    margin: -2em 0 0 0;
+  }
+</style>
