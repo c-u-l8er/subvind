@@ -92,7 +92,7 @@
       let report = machine.stats()
       console.log(report) // one continuous flow of information
       if (report.length) {
-        process(database, report)
+        process(report)
       }
     }, 1000)
   })
@@ -143,18 +143,21 @@
       event: report.event,
     })
   }
-  async function initiate (id: string, environment: any) {
-    await database.terms.insert({
-      id: id,
-      tColor: environment.t.color,
-      cColor: environment.c.color,
-      gColor: environment.g.color,
-      aColor: environment.a.color,
-      tCount: environment.t.count,
-      cCount: environment.c.count,
-      gCount: environment.g.count,
-      aCount: environment.a.count
-    })
+  function initiate (id: string, environment: any) {
+    console.log('initiate', id, environment)
+    setTimeout(async () => {
+      await database.terms.insert({
+        id: id,
+        tColor: environment.t.color,
+        cColor: environment.c.color,
+        gColor: environment.g.color,
+        aColor: environment.a.color,
+        tCount: environment.t.count,
+        cCount: environment.c.count,
+        gCount: environment.g.count,
+        aCount: environment.a.count
+      })
+    }, 1000)
   }
 </script>
 
@@ -198,7 +201,7 @@
     </div>
     <div style="border: 1px solid #fff; background: #000; margin: 0 3em;">
       <div class="entropy">
-        <Machine bind:machine={machine} bind:environment={environments[environmentIndex]} />
+        <Machine bind:machine={machine} bind:environment={environments[environmentIndex]} initiate={initiate} />
       </div>
     </div>
     <div class="reports">

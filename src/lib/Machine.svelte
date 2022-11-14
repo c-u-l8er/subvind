@@ -6,6 +6,7 @@
 
   export let machine: any
   export let environment: any
+  export let initiate: any
   
   onMount(() => {
     Matter.use(
@@ -13,6 +14,7 @@
     );
     let term = uuidv4()
     machine = Library.init('entropy', environment, term)
+    initiate(term, environment)
     setTimeout(() => {
       machine.stop()
     }, 0)
