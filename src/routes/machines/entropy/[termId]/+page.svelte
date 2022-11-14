@@ -8,8 +8,9 @@
   
   import live from 'secret-optimizer'
 
-  let terms: any;
-
+  export let data: any;
+  
+  let oneTimePads: any;
   let search = {
     enabled: true
   }
@@ -22,7 +23,7 @@
   let columns = [
     {
       id: 'id',
-      name: 'Term',
+      name: 'H',
       width: '100px',
       sort: false,
       formatter: (cell: any, row: any) => {
@@ -32,47 +33,26 @@
       }
     },
     {
-      id: 'tColor',
-      name: 'T^'
+      id: 'orbit',
+      name: '@'
     },
     {
-      id: 'tCount',
-      name: 'T#'
+      id: 'color',
+      name: '^'
     },
     {
-      id: 'cColor',
-      name: 'C^'
+      id: 'number',
+      name: '#'
     },
     {
-      id: 'cCount',
-      name: 'C#'
+      id: 'spin',
+      name: 'spin',
+      width: '250px',
     },
     {
-      id: 'gColor',
-      name: 'G^'
-    },
-    {
-      id: 'gCount',
-      name: 'G#'
-    },
-    {
-      id: 'aColor',
-      name: 'A^'
-    },
-    {
-      id: 'aCount',
-      name: 'A#'
-    },
-    { 
-      name: 'Actions',
-      sort: false,
-      hidden: false,
-      formatter: (cell: any, row: any) => {
-        return gridjs.h('a', {
-          href: `/machines/entropy/${row.cells[0].data}#main-header`,
-          className: 'btn btn-small red lighten-2 right',
-        }, 'H');
-      }
+      id: 'event',
+      name: 'event',
+      width: '250px',
     },
   ]
   let records: any = []
@@ -82,20 +62,27 @@
     let db = await secretOptimizer.db()
 
     setInterval(async () => {
-      terms = await db.terms.find().exec()
+      oneTimePads = await db.oneTimePads.find({
+        selector: {
+          term: data.termId
+        },
+        sort: [
+          { event: 'asc' }
+        ]
+      }).exec()
+
+      console.log('oneTimePads',oneTimePads)
       
       records = []
-      terms.forEach((value: any) => {
+      oneTimePads.forEach((value: any) => {
         let record = {
           id: value.id,
-          tColor: value.tColor,
-          tCount: value.tCount,
-          cColor: value.cColor,
-          cCount: value.cCount,
-          gColor: value.gColor,
-          gCount: value.gCount,
-          aColor: value.aColor,
-          aCount: value.aCount
+          term: value.term,
+          orbit: value.orbit,
+          color: value.color,
+          number: value.number,
+          spin: value.spin,
+          event: value.event
         }
         records.push(record)
       })
@@ -103,9 +90,10 @@
   })
 </script>
 
-<Banner icon="traffic" name="Info + Telemetry" description="Innovation Management System">
+<Banner icon="theaters" name="One Time Pads" description="Innovation Management System">
   <a href="/machines#main-header" class="breadcrumb">Machines</a>
   <a href="/machines/entropy#main-header" class="breadcrumb">Entropy</a>
+  <a href="#main-header" class="breadcrumb">{data.termId}</a>
 </Banner>
 <br />
 <br />

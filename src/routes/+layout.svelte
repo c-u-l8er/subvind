@@ -18,7 +18,6 @@
   let term: any
   let spoiler: boolean = false
   let machine: any
-  let stats: any = []
   let environmentIndex = 0
   let environments: any = [
     {
@@ -133,15 +132,17 @@
     }, 0)
   }
   async function process (report: any) {
-    await database.oneTimePads.insert({
-      id: uuidv4(),
-      term: report.term,
-      orbit: report.orbit,
-      color: report.color,
-      number: report.number,
-      spin: report.spin,
-      event: report.event,
-    })
+    for (const fact of report) {
+      await database.oneTimePads.insert({
+        id: uuidv4(),
+        term: fact.term,
+        orbit: fact.orbit,
+        color: fact.color,
+        number: fact.number,
+        spin: fact.spin,
+        event: fact.event,
+      })
+    }
   }
   function initiate (id: string, environment: any) {
     console.log('initiate', id, environment)
@@ -201,13 +202,13 @@
     </div>
     <div style="border: 1px solid #fff; background: #000; margin: 0 3em;">
       <div class="entropy">
-        <Machine bind:machine={machine} bind:environment={environments[environmentIndex]} initiate={initiate} />
+        <Machine bind:term={term} bind:machine={machine} bind:environment={environments[environmentIndex]} initiate={initiate} />
       </div>
     </div>
     <div class="reports">
       <div class="max-entropy">
         {#if spoiler}
-          <Spoiler />
+          <Spoiler bind:term={term} />
         {/if}
         <div style="text-align: center; height: 0.2em;">
           <button on:click={() => {spoiler = !spoiler}} class="btn btn-large btn-floating"><i class="material-icons">all_inclusive</i></button>

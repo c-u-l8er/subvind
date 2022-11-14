@@ -7,12 +7,13 @@
   export let machine: any
   export let environment: any
   export let initiate: any
+  export let term: any
   
   onMount(() => {
     Matter.use(
       'matter-wrap'
     );
-    let term = uuidv4()
+    term = uuidv4()
     machine = Library.init('entropy', environment, term)
     initiate(term, environment)
     setTimeout(() => {
