@@ -24,7 +24,7 @@
     <li>
       <div class="collapsible-header">What about small and slow?</div>
       <div class="collapsible-body">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Usu9xZfabPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/V8Gbn1NFUBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </li>
     <li>
