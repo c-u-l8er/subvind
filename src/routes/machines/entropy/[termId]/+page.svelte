@@ -10,6 +10,7 @@
 
   export let data: any;
   
+  let loading = true
   let oneTimePads: any;
   let search = {
     enabled: true
@@ -90,6 +91,8 @@
         }
         records.push(record)
       })
+
+      loading = false
     }, 0)
   }
 </script>
@@ -101,12 +104,16 @@
 </Banner>
 
 <div class="container">
-  <a href="#main-header" class="btn-floating btn-large red lighten-2 waves-effect waves-light right refresh" on:click={async () => {await load(); M.toast({html: 'Update success!'});}}><i class="material-icons">refresh</i></a>
+  <a href="#main-header" class="btn-floating btn-large red lighten-2 waves-effect waves-light right refresh" on:click={async () => {loading = true; await load(); M.toast({html: 'Update success!'});}}><i class="material-icons">refresh</i></a>
   <br />
   <br />
   <br />
-  {#if records.length}
+  {#if loading === false}
     <Table columns={columns} data={records} search={search} pagination={pagination} sort={sort} />
+  {:else}
+    <div class="progress red lighten-2">
+      <div class="indeterminate teal lighten-2"></div>
+    </div>
   {/if}
 </div>
 <br />
