@@ -35,16 +35,84 @@
     },
     {
       id: 'username',
-      name: 'username'
+      name: 'username',
+      width: '150px',
     },
     {
-      id: 'password',
-      name: 'password'
+      id: 'isOnline',
+      name: 'online',
+      width: '120px',
+      formatter: (cell: any, row: any) => {
+        return gridjs.h('div', {
+          style: 'width: 70px;',
+        }, `${cell}`);
+      }
+    },
+    {
+      id: 'isServer',
+      name: 'server',
+      width: '120px',
+      formatter: (cell: any, row: any) => {
+        return gridjs.h('div', {
+          style: 'width: 70px;',
+        }, `${cell}`);
+      }
+    },
+    {
+      id: 'isPerson',
+      name: 'person',
+      width: '120px',
+      formatter: (cell: any, row: any) => {
+        return gridjs.h('div', {
+          style: 'width: 70px;',
+        }, `${cell}`);
+      }
+    },
+    {
+      id: 'isBusiness',
+      name: 'business',
+      width: '140px',
+      formatter: (cell: any, row: any) => {
+        return gridjs.h('div', {
+          style: 'width: 70px;',
+        }, `${cell}`);
+      }
+    },
+    {
+      id: 'isElection',
+      name: 'election',
+      width: '140px',
+      formatter: (cell: any, row: any) => {
+        return gridjs.h('div', {
+          style: 'width: 70px;',
+        }, `${cell}`);
+      }
+    },
+    {
+      id: 'isSocialNetwork',
+      name: 'social',
+      width: '120px',
+      formatter: (cell: any, row: any) => {
+        return gridjs.h('div', {
+          style: 'width: 70px;',
+        }, `${cell}`);
+      }
+    },
+    {
+      id: 'isVerified',
+      name: 'verified',
+      width: '120px',
+      formatter: (cell: any, row: any) => {
+        return gridjs.h('div', {
+          style: 'width: 70px;',
+        }, `${cell}`);
+      }
     },
     { 
       name: 'Actions',
       sort: false,
       hidden: false,
+      width: '120px',
       formatter: (cell: any, row: any) => {
         return gridjs.h('a', {
           href: `/authentication/members/${row.cells[0].data}#main-header`,
@@ -73,7 +141,13 @@
         let record = {
           id: value.id,
           username: value.username,
-          password: value.password
+          isOnline: value.isOnline,
+          isServer: value.isServer,
+          isPerson: value.isPerson,
+          isBusiness: value.isBusiness,
+          isElection: value.isElection,
+          isSocialNetwork: value.isSocialNetwork,
+          isVerified: value.isVerified
         }
         records.push(record)
       })
@@ -84,8 +158,8 @@
 </script>
 
 <Banner icon="settings_input_antenna" name="Mesh Federation" description="Innovation Management System">
-  <a href="/authentication/members#main-header" class="breadcrumb">Members</a>
   <a href="/authentication/members#main-header" class="breadcrumb">Distributed Network</a>
+  <a href="/authentication/members#main-header" class="breadcrumb">Members</a>
 </Banner>
 <div class="container">
   <a href="#main-header" class="btn-floating btn-large red lighten-2 waves-effect waves-light right refresh" on:click={async () => {loading = true; await load(); M.toast({html: 'Update success!'});}}><i class="material-icons">refresh</i></a>
