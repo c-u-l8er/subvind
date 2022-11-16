@@ -27,7 +27,7 @@
 		"gridjs": "^5.1.0",
 		"matter-js": "^0.18.0",
 		"matter-wrap": "^0.2.0",
-		"secret-optimizer": "^1.0.4",
+		"secret-optimizer": "^1.0.5",
 		"uuid": "^9.0.0"
 	}
 }

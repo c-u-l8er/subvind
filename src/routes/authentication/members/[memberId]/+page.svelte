@@ -22,4 +22,4 @@
   })
 </script>
 
-member {member}
+member {JSON.stringify(member)}
