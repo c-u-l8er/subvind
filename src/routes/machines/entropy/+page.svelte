@@ -112,7 +112,7 @@
   }
 </script>
 
-<Banner icon="traffic" name="Info + Telemetry" description="Innovation Management System">
+<Banner icon="traffic" name="Sensors + Telemetry" description="Innovation Management System">
   <a href="/machines#main-header" class="breadcrumb">Machines</a>
   <a href="/machines/entropy#main-header" class="breadcrumb">Entropy</a>
 </Banner>
