@@ -47,8 +47,8 @@
         const idTokenResult = await user.getIdTokenResult()
         console.log('firebase idTokenResult', idTokenResult)
         // ...
-        let response = await axios.post('https://clients.trabur.workers.dev/istrav/login', idTokenResult)
-        localStorage.setItem('istrav-global-token', response.data)
+        // let response = await axios.post('https://clients.trabur.workers.dev/istrav/login', idTokenResult)
+        localStorage.setItem('token', idTokenResult.toString())
 
         window.location.href = `/authentication/members#main-header`
       } else {

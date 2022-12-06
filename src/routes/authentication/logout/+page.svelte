@@ -32,7 +32,7 @@
       .then(() => {
         // sign out of istrav-global
         firebase.set('')
-        window.localStorage.removeItem('istrav-global-token')
+        window.localStorage.removeItem('token')
         window.location.href = '/'
       });
   })
