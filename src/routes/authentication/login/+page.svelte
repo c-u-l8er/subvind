@@ -48,7 +48,7 @@
         console.log('firebase idTokenResult', idTokenResult)
         // ...
         // let response = await axios.post('https://clients.trabur.workers.dev/istrav/login', idTokenResult)
-        localStorage.setItem('token', idTokenResult.toString())
+        localStorage.setItem('token', idTokenResult.token)
 
         window.location.href = `/authentication/members#main-header`
       } else {
