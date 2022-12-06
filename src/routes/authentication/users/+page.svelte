@@ -157,9 +157,9 @@
   }
 </script>
 
-<Banner icon="record_voice_over" name="Mesh Federation" description="Innovation Management System">
-  <a href="/authentication/members#main-header" class="breadcrumb">Distributed Network</a>
-  <a href="/authentication/members#main-header" class="breadcrumb">Members</a>
+<Banner icon="settings_input_antenna" name="Signaling State" description="Innovation Management System">
+  <a href="/authentication/signaling#main-header" class="breadcrumb">Centralized Coordnation</a>
+  <a href="/authentication/signaling#main-header" class="breadcrumb">Users</a>
 </Banner>
 <div class="container">
   <a href="#main-header" class="btn-floating btn-large red lighten-2 waves-effect waves-light right refresh" on:click={async () => {loading = true; await load(); M.toast({html: 'Update success!'});}}><i class="material-icons">refresh</i></a>

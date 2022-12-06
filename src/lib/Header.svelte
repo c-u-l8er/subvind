@@ -17,7 +17,8 @@
     <ul class="left">
       <li><a href="https://istrav.com" class="btn"><i class="material-icons left">keyboard_backspace</i>Website</a></li>
       {#if user}
-        <li><a href="/authentication/members#main-header">Members</a></li>
+      <li><a href="/authentication/members#main-header">Members</a></li>
+      <li><a href="/authentication/users#main-header">Users</a></li>
         <li><a href="/authentication/logout#main-header">Logout</a></li>
       {:else}
         <li><a href="/authentication#main-header">Authentication</a></li>

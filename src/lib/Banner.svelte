@@ -11,7 +11,7 @@
   <br />
   <div class="container">
     <div class="row" style="margin-bottom: 0;">
-      <div class="col m6">
+      <div class="col m7">
         {#if description}
           <h2 class="">{description}</h2>
         {/if}
@@ -27,8 +27,11 @@
           </div>
         </nav>
       </div>
-      <div class="col m6">
+      <div class="col m5">
         <div style="text-align: right;">
+          <a href="/authentication/members#main-header" class="waves-effect waves-light btn black"><i class="material-icons left">record_voice_over</i>Peer 2 Peer</a>
+          <div style="margin-bottom: 0.5em;"></div>
+          <a href="/authentication/users#main-header" class="waves-effect waves-light btn black"><i class="material-icons left">settings_input_antenna</i>Client Server</a>
         </div>
       </div>
     </div>
