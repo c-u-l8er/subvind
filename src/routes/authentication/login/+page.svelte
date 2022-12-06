@@ -66,7 +66,7 @@
           await promptEmailVerification(user)
         }
 
-        // window.location.href = `/authentication/members#main-header`
+        window.location.href = `/authentication/members#main-header`
       } else {
         // User is signed out
         // ...
