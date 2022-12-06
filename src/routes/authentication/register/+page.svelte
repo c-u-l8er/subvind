@@ -2,15 +2,13 @@
   import { onMount } from 'svelte';
 
   import firebase from '$lib/stores/firebase';
-
-  import axios from 'axios'
   
   import Register from '$lib/Register.svelte'
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "firebase/app";
   import { getAnalytics } from "firebase/analytics";
-  import { getAuth, onAuthStateChanged } from "firebase/auth";
+  import { getAuth, onAuthStateChanged, sendEmailVerification } from "firebase/auth";
 
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -27,6 +25,16 @@
     measurementId: "G-438HF3486Z"
   };
   let auth: any
+
+  async function promptEmailVerification(user: any) {
+    var response = confirm("We'd like to send you an email verification; for confirmation purposes. Many features of our app are locked down to annonymous users in order to limit spam. Proceed?");
+    if (response == true) {
+      await sendEmailVerification(user)
+      alert(`Great! We sent you (${user.email}) an email; be sure to check spam.`);
+    } else {
+      // do nothing
+    }
+  }
 
   onMount(() => {
     // Initialize Firebase
@@ -47,6 +55,9 @@
         // ...
         // let response = await axios.post('https://clients.trabur.workers.dev/istrav/login', idTokenResult)
         localStorage.setItem('token', idTokenResult.token)
+
+        // send email verification
+        await promptEmailVerification(user)
 
         window.location.href = `/authentication/members#main-header`
       } else {

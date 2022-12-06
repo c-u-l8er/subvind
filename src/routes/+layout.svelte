@@ -89,7 +89,7 @@
 
     setInterval(() => {
       let report = machine.stats()
-      console.log(report) // one continuous flow of information
+      // console.log(report) // one continuous flow of information
       if (report.length) {
         process(report)
       }
