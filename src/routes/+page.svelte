@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<br />
+<!-- <br />
 <br />
 <br />
 <br />
@@ -18,7 +18,7 @@
 <br />
 <br />
 <br />
-<br />
+<br /> -->
 
 <style>
   .contain {
@@ -41,7 +41,6 @@
 
   #discord {
     width: 100%;
-    height: 100vh;
     max-height: 800px;
     padding: 0;
     border: 0;

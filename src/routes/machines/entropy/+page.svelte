@@ -23,8 +23,8 @@
   let columns = [
     {
       id: 'id',
-      name: '+',
-      width: '100px',
+      name: 'generation',
+      width: '150px',
       sort: false,
       formatter: (cell: any, row: any) => {
         return gridjs.h('div', {
@@ -33,46 +33,30 @@
       }
     },
     {
-      id: 'tColor',
-      name: 'T^'
+      id: 't',
+      name: 'T'
     },
     {
-      id: 'tCount',
-      name: 'T#'
+      id: 'c',
+      name: 'C'
     },
     {
-      id: 'cColor',
-      name: 'C^'
+      id: 'g',
+      name: 'G'
     },
     {
-      id: 'cCount',
-      name: 'C#'
-    },
-    {
-      id: 'gColor',
-      name: 'G^'
-    },
-    {
-      id: 'gCount',
-      name: 'G#'
-    },
-    {
-      id: 'aColor',
-      name: 'A^'
-    },
-    {
-      id: 'aCount',
-      name: 'A#'
+      id: 'a',
+      name: 'A'
     },
     { 
-      name: 'Actions',
+      name: '',
       sort: false,
       hidden: false,
       formatter: (cell: any, row: any) => {
         return gridjs.h('a', {
-          href: `/machines/entropy/${row.cells[0].data}#main-header`,
+          href: `/machines/entropy/${row.cells[0].data}`,
           className: 'btn btn-small red lighten-2 right',
-        }, 'H');
+        }, 'FLOWS');
       }
     },
   ]
@@ -95,14 +79,10 @@
       terms.forEach((value: any) => {
         let record = {
           id: value.id,
-          tColor: value.tColor,
-          tCount: value.tCount,
-          cColor: value.cColor,
-          cCount: value.cCount,
-          gColor: value.gColor,
-          gCount: value.gCount,
-          aColor: value.aColor,
-          aCount: value.aCount
+          t: `${value.tColor}: ${value.tCount}`,
+          c: `${value.cColor}: ${value.cCount}`,
+          g: `${value.gColor}: ${value.gCount}`,
+          a: `${value.aColor}: ${value.aCount}`
         }
         records.push(record)
       })
@@ -112,12 +92,12 @@
   }
 </script>
 
-<Banner icon="traffic" name="Sensors + Telemetry" description="Innovation Management System">
-  <a href="/machines#main-header" class="breadcrumb">Machines</a>
-  <a href="/machines/entropy#main-header" class="breadcrumb">Entropy</a>
+<Banner icon="traffic" name="Finite Flow Machines" description="flow-based devgramming">
+  <a href="/" class="breadcrumb">Machines</a>
+  <a href="/machines/entropy" class="breadcrumb">Entropy</a>
 </Banner>
 <div class="container">
-  <a href="#main-header" class="btn-floating btn-large red lighten-2 waves-effect waves-light right refresh" on:click={async () => {loading = true; await load(); M.toast({html: 'Update success!'});}}><i class="material-icons">refresh</i></a>
+  <a href="#" class="btn-floating btn-large red lighten-2 waves-effect waves-light right refresh" on:click={async () => {loading = true; await load(); M.toast({html: 'Update success!'});}}><i class="material-icons">refresh</i></a>
   <br />
   <br />
   <br />

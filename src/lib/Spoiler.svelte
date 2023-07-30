@@ -4,8 +4,8 @@
   export let term: any
 </script>
 
-<h4>Secret Initiation</h4>
-<p class="term">(<a href={`/machines/entropy/${term}#main-header`} class="id">{term}</a>)</p>
+<h4>Random Flow Generator</h4>
+<p class="term">(<a href={`/machines/entropy/${term}#`} class="id">{term}</a>)</p>
 <Facts />
 
 <style>

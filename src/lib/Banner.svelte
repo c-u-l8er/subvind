@@ -29,9 +29,7 @@
       </div>
       <div class="col m5">
         <div style="text-align: right;">
-          <a href="/authentication/members#main-header" class="waves-effect waves-light btn black"><i class="material-icons left">record_voice_over</i>Peer 2 Peer</a>
-          <div style="margin-bottom: 0.5em;"></div>
-          <a href="/authentication/users#main-header" class="waves-effect waves-light btn black"><i class="material-icons left">settings_input_antenna</i>Client Server</a>
+          <a href="https://subvind.com" class="waves-effect waves-light btn black"><i class="material-icons left">terminal</i>subvind</a>
         </div>
       </div>
     </div>

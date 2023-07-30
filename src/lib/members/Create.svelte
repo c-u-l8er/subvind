@@ -26,7 +26,7 @@
       password
     })
 
-    window.location.href = `/authentication/members#main-header`
+    window.location.href = `/authentication/members`
   }
 </script>
 
@@ -60,7 +60,7 @@
     </div>
     <div class="card-action">
       <button class="btn btn-large red lighten-2" type='submit'>Submt</button>
-      <a href="/authentication/members#main-header" class="btn btn-large white black-text">Cancel</a>
+      <a href="/authentication/members" class="btn btn-large white black-text">Cancel</a>
     </div>
   </form>
 </div>

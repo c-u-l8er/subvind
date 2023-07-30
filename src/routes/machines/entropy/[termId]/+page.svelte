@@ -24,7 +24,7 @@
   let columns = [
     {
       id: 'id',
-      name: 'H',
+      name: 'flow',
       width: '100px',
       sort: false,
       formatter: (cell: any, row: any) => {
@@ -35,19 +35,22 @@
     },
     {
       id: 'orbit',
-      name: '@'
+      name: 'intersection',
+      width: '160px',
     },
     {
       id: 'color',
-      name: '^'
+      name: 'signal',
+      width: '150px',
     },
     {
       id: 'number',
-      name: '#'
+      name: 'traffic',
+      width: '150px',
     },
     {
       id: 'spin',
-      name: 'spin',
+      name: 'direction',
       width: '250px',
     },
     {
@@ -97,14 +100,14 @@
   }
 </script>
 
-<Banner icon="theaters" name="One Time Pads" description="Innovation Management System">
-  <a href="/machines#main-header" class="breadcrumb">Machines</a>
-  <a href="/machines/entropy#main-header" class="breadcrumb">Entropy</a>
-  <a href="#main-header" class="breadcrumb">{data.termId}</a>
+<Banner icon="theaters" name="Incident Investigation" description="flow-based devgramming">
+  <a href="/" class="breadcrumb">Machines</a>
+  <a href="/machines/entropy" class="breadcrumb">Entropy</a>
+  <a href="#" class="breadcrumb">{data.termId}</a>
 </Banner>
 
 <div class="container">
-  <a href="#main-header" class="btn-floating btn-large red lighten-2 waves-effect waves-light right refresh" on:click={async () => {loading = true; await load(); M.toast({html: 'Update success!'});}}><i class="material-icons">refresh</i></a>
+  <a href="#" class="btn-floating btn-large red lighten-2 waves-effect waves-light right refresh" on:click={async () => {loading = true; await load(); M.toast({html: 'Update success!'});}}><i class="material-icons">refresh</i></a>
   <br />
   <br />
   <br />

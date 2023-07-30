@@ -1,7 +1,7 @@
 
 <div class="anchor">
-  <a href="https://istrav.com">
-    <img src="/anchor.png" alt="isTrav" />
+  <a href="https://subvind.com">
+    <img src="/anchor.png" alt="entropy.subvind.com" />
   </a>
 </div>
 
