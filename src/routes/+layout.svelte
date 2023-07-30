@@ -182,9 +182,9 @@
           <a href="#!" class="btn btn-large" on:click={(e) => stop(e)}><i class="material-icons">stop</i></a>
           <a href="#!" class="btn btn-large dropdown-trigger" data-target="dropdown1"><i class="material-icons">more_horiz</i></a>
           <ul id='dropdown1' class='dropdown-content' style="min-width: 250px;">
-            <li><a href="#!" on:click={(e) => change(e, 0)}>RGBY (Fair Bounce)</a></li>
+            <li><a href="#!" on:click={(e) => change(e, 0)}>RGBY (Mix Bounce)</a></li>
             <li><a href="#!" on:click={(e) => change(e, 1)}>Red or Blue (Fair Bounce)</a></li>
-            <li><a href="#!" on:click={(e) => change(e, 2)}>Red and Blue (Favor Bounce)</a></li>
+            <li><a href="#!" on:click={(e) => change(e, 2)}>Red and Blue (Double Bounce)</a></li>
             <li class="divider" tabindex="-1"></li>
             <li><a href="#!" on:click={(e) => change(e, 3)}>Leaning (25:25:0:50)</a></li>
             <li><a href="#!" on:click={(e) => change(e, 4)}>Center (0:50:50:0)</a></li>
