@@ -1,27 +1,27 @@
+<script lang="ts">
+  import { onMount } from "svelte";
+
+  let hostname: any;
+
+	onMount(async() => {
+		hostname = window.location.hostname
+		if (hostname === 'localhost') {
+			hostname = 'entropy.subvind.com'
+		}
+	})
+</script>
+
 <footer>
-  <nav class="white black-text">
-    <div class="container">
-      <div class="nav-wrapper">
-        <ul class="">
-          <li class=""><a href="/" target="_blank">istrav.live © {new Date().getFullYear()}.</a></li>
-          <li class=""><a href="https://istrav.com" target="_blank">Made with &hearts; by isTrav.</a></li>
-        </ul>
-        <ul class="right">
-          <li><a href={`https://istrav.com`}>Website</a></li>
-          <li><a href={`https://istrav.net`}>Community</a></li>
-          <li><a href={`https://istrav.dev`}>Headquarters</a></li>
-          <li><a href={`https://istrav.info`}>Information</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <p style="margin: 0;">
+    {hostname} © {new Date().getFullYear()}.
+  </p>
+  <p style="margin: 0;">
+    powered by <a href="https://subvind.com">subvind</a>
+  </p>
 </footer>
 
 <style>
   footer {
-    box-shadow: 0 0 5em #aaa;
-  }
-  footer ul li a {
-    color: #111;
+    text-align: center;
   }
 </style>

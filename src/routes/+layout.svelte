@@ -255,7 +255,10 @@
 <br />
 <br />
 
-<!-- <Footer /> -->
+<Footer />
+
+<br />
+<br />
 
 <style>
   .motherboard {
