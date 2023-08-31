@@ -1,23 +1,12 @@
-istrav.live
+Fair Source 5 (v0.9).
 ========
-Innovation Management Software (IMS)
+Source code to an Enterprise Resource Planning (ERP) system...
 
-istrav source code:
-- istrav.com: https://github.com/trabur/istrav.com
-- trabur.workers.dev: https://github.com/trabur/istrav-global
-- istrav.net: https://github.com/trabur/istrav-platform-frontgate
-- meta.istrav.net: https://github.com/trabur/istrav-platform-frontend
-- istrav.istrav.dev: https://github.com/trabur/istrav-platform-backend
-- istrav-load-balancer: https://github.com/trabur/istrav-load-balancer
-- istrav.dev: https://github.com/trabur/istrav.dev
-- istrav-headquarters: https://github.com/trabur/istrav-headquarters
-- istrav.live: https://github.com/trabur/istrav.live
+Not open source. Not closed source. The Fair Source License allows everyone to see the source code and makes the software free to use for a limited number of users in your organization. It offers some of the benefits of open source while preserving the ability to charge for the software. https://fair.io
 
-istrav.live tech:
-- materializecss
-- matter.js
+powered by subvind...
+- project homepage: https://subvind.com
+- purchase project: https://istrav.com
 
-## about
-```bash
-npm run dev
-```
+system...
+- root project: https://github.com/subvind/subvind
