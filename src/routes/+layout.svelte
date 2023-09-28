@@ -238,18 +238,6 @@
   <a href="/machines/entropy" class="btn btn-large">Finite Flow Machines</a>
   <p>
     (system: from well ordered through congestion <br /> then through double xor then over sensors and <br /> then loop back around to repeat)
-    <br />
-    <br />
-    Flow-Based Programming (FBP) and Finite State Machines (FSMs) are two distinct programming concepts with some common characteristics. FBP is a programming paradigm that emphasizes the flow of data between components in a directed graph, promoting modularity and scalability in data processing workflows. FSMs, on the other hand, are mathematical models used to represent systems with discrete states and transitions.
-    <br />
-    <br />
-    The commonalities between FBP and FSMs include their graph-based representation, sequential data processing, decision-making capabilities, event-driven behavior, and visualization. Both paradigms allow for the handling of error conditions and can exhibit stateful behavior.
-    <br />
-    <br />
-    When integrated, FSMs can influence FBP by providing a structured approach to modeling stateful components and conditional data processing. FSMs can be used to create event-driven FBP systems, and their visual representation can aid in debugging and understanding complex FBP graphs.
-    <br />
-    <br />
-    However, it's important to recognize that FBP and FSMs serve different purposes. FBP is a broader paradigm focused on data flow and component-based design, while FSMs are specifically used to model systems with discrete states and transitions. Combining these concepts can enhance the capabilities of data processing systems, allowing for more efficient and organized development of complex applications.
   </p>
 </div>
 <br />
