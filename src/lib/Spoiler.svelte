@@ -4,7 +4,7 @@
   export let term: any
 </script>
 
-<h4>Random Generator</h4>
+<h4>Random/Caos/Predictable</h4>
 <p class="term">(<a href={`/machines/entropy/${term}#`} class="id">{term}</a>)</p>
 <Facts />
 
