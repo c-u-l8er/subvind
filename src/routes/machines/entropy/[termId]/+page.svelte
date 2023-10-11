@@ -100,7 +100,7 @@
   }
 </script>
 
-<Banner icon="theaters" name="Incident Investigation" description="flow-based devgramming">
+<Banner icon="theaters" name="Incident Investigation" description="finite flow machines">
   <a href="/" class="breadcrumb">Machines</a>
   <a href="/machines/entropy" class="breadcrumb">Entropy</a>
   <a href="#" class="breadcrumb">{data.termId}</a>

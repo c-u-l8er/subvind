@@ -92,7 +92,7 @@
   }
 </script>
 
-<Banner icon="traffic" name="Finite Flow Machines" description="flow-based devgramming">
+<Banner icon="traffic" name="Finite Flow Machines" description="finite flow machines">
   <a href="/" class="breadcrumb">Machines</a>
   <a href="/machines/entropy" class="breadcrumb">Entropy</a>
 </Banner>
