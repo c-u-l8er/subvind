@@ -17,7 +17,7 @@
 TRAVIS = BURANDT
   -ART = -ART
    VIS = BUND
- (MIX & COMBINE)
+(MIX & COMBINE)
     SUBVIND</pre>
     </div>
 
