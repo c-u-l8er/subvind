@@ -1,27 +1,15 @@
-import adapter from '@sveltejs/adapter-auto';
-import preprocess from 'svelte-preprocess';
+import adapter from "@sveltejs/adapter-cloudflare";
+import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-	preprocess: preprocess(),
+  // Consult https://svelte.dev/docs/kit/integrations
+  // for more information about preprocessors
+  preprocess: vitePreprocess(),
 
-	kit: {
-		adapter: adapter(),
-
-		// // Override http methods in the Todo forms
-		// methodOverride: {
-		// 	allowed: ['PATCH', 'DELETE']
-		// },
-    // vite: {
-    //   resolve: {
-    //     alias: {
-    //       'node-fetch': 'isomorphic-fetch',
-    //     },
-    //   },
-    // },
-	}
+  kit: {
+    adapter: adapter(),
+  },
 };
 
 export default config;
