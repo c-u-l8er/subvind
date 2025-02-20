@@ -6,7 +6,7 @@
 
 <h4>Random/Chaos/Predictable</h4>
 <p class="term">
-    (<a href={`/machines/amalgamy/${term}#`} class="id">{term}</a>)
+    (<a href={`/machines/amalgam/${term}#`} class="id">{term}</a>)
 </p>
 <Facts />
 

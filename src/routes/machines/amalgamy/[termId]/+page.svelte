@@ -107,10 +107,10 @@
 <Banner
     icon="theaters"
     name="Incident Investigation"
-    description="amalgamy machines"
+    description="amalgam machines"
 >
     <a href="/" class="breadcrumb">Machines</a>
-    <a href="/machines/amalgamy" class="breadcrumb">Amalgamy</a>
+    <a href="/machines/amalgam" class="breadcrumb">Amalgam</a>
     <a href="#" class="breadcrumb">{data.termId}</a>
 </Banner>
 

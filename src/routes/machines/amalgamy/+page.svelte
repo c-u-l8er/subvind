@@ -60,7 +60,7 @@
                 return gridjs.h(
                     "a",
                     {
-                        href: `/machines/amalgamy/${row.cells[0].data}`,
+                        href: `/machines/amalgam/${row.cells[0].data}`,
                         className: "btn btn-small red lighten-2 right",
                     },
                     "FLOWS",
@@ -100,9 +100,9 @@
     }
 </script>
 
-<Banner icon="traffic" name="Amalgamy Machines" description="amalgamy machines">
+<Banner icon="traffic" name="Amalgam Machines" description="amalgam machines">
     <a href="/" class="breadcrumb">Machines</a>
-    <a href="/machines/amalgamy" class="breadcrumb">Amalgamy</a>
+    <a href="/machines/amalgam" class="breadcrumb">Amalgam</a>
 </Banner>
 <div class="container">
     <a

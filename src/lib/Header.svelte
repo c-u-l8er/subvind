@@ -36,7 +36,7 @@
         <a href="/#main-header" class="brand-logo center">isTrav Live</a>
         <ul class="right">
             <li>
-                <a href="/machines/amalgamy#main-header">Amalgamy Machines</a>
+                <a href="/machines/amalgam#main-header">Amalgam Machines</a>
             </li>
             <li>
                 <a href="/machines/scramble#main-header">Scramble Machines</a>

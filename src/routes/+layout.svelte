@@ -99,11 +99,11 @@
     function stop(e: any) {
         e.preventDefault();
         machine.stop();
-        let el: any = document.getElementById("amalgamy");
+        let el: any = document.getElementById("amalgam");
         el.innerHTML = "";
         term = uuidv4();
         let settings = environments[environmentIndex];
-        machine = Library.init("amalgamy", settings, term);
+        machine = Library.init("amalgam", settings, term);
         initiate(term, settings);
         setTimeout(() => {
             machine.stop();
@@ -121,11 +121,11 @@
         e.preventDefault();
         environmentIndex = index; // update
         machine.stop();
-        let el: any = document.getElementById("amalgamy");
+        let el: any = document.getElementById("amalgam");
         el.innerHTML = "";
         term = uuidv4();
         let settings = environments[environmentIndex];
-        machine = Library.init("amalgamy", settings, term);
+        machine = Library.init("amalgam", settings, term);
         initiate(term, settings);
         setTimeout(() => {
             machine.stop();
@@ -166,7 +166,7 @@
     <title>subvind: Community Solutions</title>
     <meta
         name="description"
-        content="This amalgamy machine runs within a javascript physics engine which is a game loop that bounces balls around outputting randomness. This unpredictability is used in other repos for sending encrypted messages by mixing data before it gets sent over insecure channels and then within another safe space we unmix it to get back the original data."
+        content="This amalgam machine runs within a javascript physics engine which is a game loop that bounces balls around outputting randomness. This unpredictability is used in other repos for sending encrypted messages by mixing data before it gets sent over insecure channels and then within another safe space we unmix it to get back the original data."
     />
 </svelte:head>
 
@@ -251,13 +251,13 @@
                     </ul>
                 </div>
                 <header>
-                    <h1>Amalgamy</h1>
+                    <h1>Amalgam</h1>
                     <h2>A mixture of metals or combination of things.</h2>
                 </header>
             </div>
         </div>
         <div style="border: 1px solid #fff; background: #000; margin: 0 3em;">
-            <div class="amalgamy">
+            <div class="amalgam">
                 <Machine
                     bind:term
                     bind:machine
@@ -267,7 +267,7 @@
             </div>
         </div>
         <div class="reports">
-            <div class="max-amalgamy">
+            <div class="max-amalgam">
                 {#if spoiler}
                     <Spoiler bind:term />
                 {/if}
@@ -302,7 +302,7 @@
 <br />
 <br />
 <div class="machines">
-    <a href="/machines/amalgamy" class="btn btn-large">Amalgamy Machines</a>
+    <a href="/machines/amalgam" class="btn btn-large">Amalgam Machines</a>
     <p>
         (system: from well ordered through congestion <br /> then through double
         xor then over sensors and <br /> then loop back around to repeat)
@@ -365,7 +365,7 @@
         margin: 0 0 0.5em;
     }
 
-    .amalgamy {
+    .amalgam {
         height: 1000px;
         width: 1000px;
         text-align: center;
@@ -374,7 +374,7 @@
         padding: 0;
         background: #000;
     }
-    .max-amalgamy {
+    .max-amalgam {
         padding: 1em;
         color: #aaa;
         margin: 0;

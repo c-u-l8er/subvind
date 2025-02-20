@@ -75,7 +75,7 @@
         </li>
         <li>
             <div class="collapsible-header">
-                When should we use amalgamy for perfect secrecy?
+                When should we use amalgam for perfect secrecy?
             </div>
             <div class="collapsible-body">
                 <iframe
