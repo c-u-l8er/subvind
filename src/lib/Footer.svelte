@@ -14,18 +14,25 @@
 <footer>
     <div class="code-wrap">
         <pre class="code-block">
-TRAVIS = BURANDT
-  -ART = -ART
-   VIS = BUND
-(MIX & COMBINE)
-    SUBVIND</pre>
+      -------
+      FORMULA:
+COMMUNITY SOLUTIONS
+      -------
+  TRAVIS = BURANDT
+    -ART = -ART
+     VIS = BUND
+  {`{MIX & COMBINE}`}
+      -------
+      SUBVIND:
+COMMUNITY SOLUTIONS
+      -------</pre>
     </div>
-
+    <br />
     <p style="margin: 0;">
         {hostname} © {new Date().getFullYear()}.
     </p>
     <p style="margin: 0;">
-        powered by <a href="https://wrand.cc">WRANDTEL</a>
+        R&D by <a href="https://wrand.cc">WRANDTEL</a>
     </p>
 </footer>
 
