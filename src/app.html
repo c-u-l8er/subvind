@@ -1,58 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCPK4C2SCV"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-GCPK4C2SCV"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-			gtag('config', 'G-GCPK4C2SCV');
-		</script>
+            gtag("config", "G-GCPK4C2SCV");
+        </script>
 
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
 
-		<!-- realfavicongenerator.net -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-		<link rel="manifest" href="/favicons/site.webmanifest">
-		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#000000">
-		<link rel="shortcut icon" href="/favicons/favicon.ico">
-		<meta name="msapplication-TileColor" content="#000000">
-		<meta name="msapplication-config" content="/favicons/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+        <!-- realfavicongenerator.net -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicons/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicons/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/favicons/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="/favicons/safari-pinned-tab.svg"
+            color="#000000"
+        />
+        <link rel="shortcut icon" href="/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta
+            name="msapplication-config"
+            content="/favicons/browserconfig.xml"
+        />
+        <meta name="theme-color" content="#ffffff" />
 
-		<!-- icons -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- icons -->
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
 
-		<!-- Compiled and minified CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
 
-		<!-- Compiled and minified JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <!-- only required if using Matter.RenderPixi -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.2.1/pixi.js"></script>
+        <!-- only required if using Matter.RenderPixi -->
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.2.1/pixi.js"
+        ></script>
 
-    <!-- matterjs -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.15.0/matter.min.js"></script>
+        <!-- matterjs -->
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.15.0/matter.min.js"
+        ></script>
 
-		<!-- matter wrap -->
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
+        <!-- matter wrap -->
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"
+        ></script>
 
-		<!-- chart.js -->
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-		
-		<!-- grid.js -->
-		<link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
-		<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+        <!-- chart.js -->
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+        ></script>
 
-		%sveltekit.head%
-	</head>
-	<body>
-		<div>%sveltekit.body%</div>
-	</body>
+        <!-- grid.js -->
+        <link
+            href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+        %sveltekit.head%
+    </head>
+    <body>
+        <div>%sveltekit.body%</div>
+    </body>
 </html>

@@ -170,7 +170,10 @@
     />
 </svelte:head>
 
+<Header />
 <div class="motherboard">
+    <br />
+    <br />
     <br />
     <br />
 
@@ -323,6 +326,11 @@
     :global(body) {
         background: #eee;
         color: #333;
+        font-family: "Courier New", monospace;
+    }
+
+    header {
+        font-family: "Helvetica", monospace;
     }
 
     .control-panel {
