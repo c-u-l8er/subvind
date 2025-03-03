@@ -3,7 +3,7 @@
 </script>
 
 <Banner icon="tonality" name="Fake/Genuine" description="amalgam machines">
-    <a href="/" class="breadcrumb">Machines</a>
+    <a href="/" class="breadcrumb">Home</a>
     <a href="/machines/decoy" class="breadcrumb">Decoy</a>
 </Banner>
 

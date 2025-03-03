@@ -3,7 +3,7 @@
 </script>
 
 <Banner icon="transform" name="Encode & Decode" description="amalgam machines">
-    <a href="/" class="breadcrumb">Machines</a>
+    <a href="/" class="breadcrumb">Home</a>
     <a href="/machines/scramble" class="breadcrumb">Scramble</a>
 </Banner>
 

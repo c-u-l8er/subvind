@@ -1,56 +1,62 @@
-<script lang="ts">
-    import { onMount } from "svelte";
-
-    let hostname: any;
-
-    onMount(async () => {
-        hostname = window.location.hostname;
-        if (hostname === "localhost") {
-            hostname = "subvind.com";
-        }
-    });
+<script>
+    let year = new Date().getFullYear();
 </script>
 
-<footer>
-    <div class="code-wrap">
-        <pre class="code-block">
-      -------
-      FORMULA:
-COMMUNITY SOLUTIONS
-      -------
-  TRAVIS = BURANDT
-    -ART = -ART
-     VIS = BUND
-  {`{MIX & COMBINE}`}
-      -------
-      SUBVIND:
-COMMUNITY SOLUTIONS
-      -------</pre>
+<div class="footer-wrapper">
+    <div class="squiggle">
+        <svg
+            aria-hidden="true"
+            width="100%"
+            height="8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <pattern id="a" width="91" height="8" patternUnits="userSpaceOnUse">
+                <g clip-path="url(#clip0_2426_11367)">
+                    <path
+                        d="M114 4c-5.067 4.667-10.133 4.667-15.2 0S88.667-.667 83.6 4 73.467 8.667 68.4 4 58.267-.667 53.2 4 43.067 8.667 38 4 27.867-.667 22.8 4 12.667 8.667 7.6 4-2.533-.667-7.6 4s-10.133 4.667-15.2 0S-32.933-.667-38 4s-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0"
+                        stroke="#000"
+                        stroke-linecap="square"
+                    ></path>
+                </g>
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#a)"></rect>
+        </svg>
     </div>
-    <br />
-    <p style="margin: 0;">
-        {hostname} © {new Date().getFullYear()}.
-    </p>
-    <p style="margin: 0;">
-        R&D by <a href="https://wrand.cc">WRANDTEL</a>
-    </p>
-</footer>
+    <footer>
+        <div class="footer-content">
+            <span style="float: right">Made in Texas, USA!</span>
+            <p>
+                &copy; {year} by subvind: Community Colutions.<br />
+                All rights reserved.
+            </p>
+            <div class="footer-nav">
+                <a href="https://wrand.cc/privacy"> Privacy Policy </a>
+                <a href="https://wrand.cc/terms"> Terms of Service </a>
+                <a href="/sitemap.xml">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+</div>
 
 <style>
-    .code-wrap {
-        display: flex;
-        justify-content: center; /* Center the code block horizontally */
-    }
-
-    .code-block {
-        width: fit-content; /* Adjust width to content */
-        text-align: left; /* Align text to the left within the block */
-        white-space: pre; /* Preserve whitespace and line breaks */
-        font-family: monospace; /* Use a monospace font for alignment */
-        margin: 0 auto; /* Center the block itself (redundant with code-wrap centering, but good practice) */
+    .footer-wrapper {
+        width: 100%;
+        background: #2c3e50;
     }
 
     footer {
-        text-align: center;
+        max-width: 1000px;
+        width: 100%;
+        color: #aaa;
+        margin: 0 auto;
+        padding: 0 0 1em;
+    }
+
+    footer a {
+        color: #fff;
+    }
+    footer a:hover {
+        text-decoration: underline;
     }
 </style>

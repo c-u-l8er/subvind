@@ -1,14 +1,15 @@
 <script lang="ts">
-    import Facts from "./information/Facts.svelte";
+    // import Facts from "./information/Facts.svelte";
 
     export let term: any;
 </script>
 
-<h4>Random/Chaos/Predictable</h4>
+<h4>Random &#x2022; Chaotic &#x2022; Predictable</h4>
 <p class="term">
     (<a href={`/machines/amalgam/${term}#`} class="id">{term}</a>)
 </p>
-<Facts />
+
+<!-- <Facts /> -->
 
 <style>
     h4 {

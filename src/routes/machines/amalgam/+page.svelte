@@ -101,7 +101,7 @@
 </script>
 
 <Banner icon="traffic" name="Amalgam Machines" description="amalgam machines">
-    <a href="/" class="breadcrumb">Machines</a>
+    <a href="/" class="breadcrumb">Home</a>
     <a href="/machines/amalgam" class="breadcrumb">Amalgam</a>
 </Banner>
 <div class="container">
@@ -125,11 +125,20 @@
         </div>
     {/if}
 </div>
-<br />
-<br />
-<br />
+
+<div class="machines">
+    <p>
+        (system: from well ordered through congestion <br /> then through double
+        xor then over sensors and <br /> then loop back around to repeat)
+    </p>
+</div>
 
 <style>
+    .machines {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
     .refresh {
         margin: -2em 0 0 0;
     }
