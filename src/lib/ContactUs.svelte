@@ -4,7 +4,7 @@
 <div class="wrap">
     <form
         class="contact-form"
-        action="https://formspree.io/f/myzkbppo"
+        action="https://formspree.io/f/mrbendly"
         method="POST"
     >
         <div class="paper">
