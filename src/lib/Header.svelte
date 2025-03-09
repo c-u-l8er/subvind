@@ -24,6 +24,10 @@
             <div style="float: right;">
                 &#123; <a href="https://istrav.com">WEB SOLUTIONS</a> &#x2022;
                 <a href="https://subvind.com">COMMUNITY SOLUTIONS</a> &#125;
+                <a
+                    href="https://ticktickclock.com"
+                    style="font-family: Arial, Helvetica, sans-serif;">!!</a
+                >
             </div>
         </div>
     </div>
