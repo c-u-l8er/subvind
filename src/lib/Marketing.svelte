@@ -73,7 +73,11 @@ COMMUNITY SOLUTIONS
       -------</pre>
                 </div>
             </div>
-            <!-- <a href="/history" class="notecard-btn">Learn Our History</a> -->
+            <a
+                href="https://wrand.cc/laboratory"
+                target="_blank"
+                class="notecard-btn">Join Our Laboratory #33</a
+            >
         </div>
     </div>
     <p class="tagline">
