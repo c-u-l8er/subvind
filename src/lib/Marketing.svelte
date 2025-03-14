@@ -76,6 +76,10 @@ COMMUNITY SOLUTIONS
             <!-- <a href="/history" class="notecard-btn">Learn Our History</a> -->
         </div>
     </div>
+    <p class="tagline">
+        "The map is not the territory, <br />but the pattern is the path."
+        ~ArtInt
+    </p>
     <section class="portfolio-summary">
         <h2>OPEN SOURCE GAMIFICATION</h2>
         <div class="tag-cloud">
@@ -158,7 +162,7 @@ COMMUNITY SOLUTIONS
         gap: 40px;
         width: 100%;
         max-width: 1200px;
-        margin: 0 auto 4em auto;
+        margin: 0 auto 0 auto;
     }
 
     .notecard {
