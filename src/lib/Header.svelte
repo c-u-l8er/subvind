@@ -15,12 +15,11 @@
 <header class="cloud-header">
     <div class="domain-nav">
         <div class="domain-container">
-            <a href="https://c-u-l8er.link">IDEATION</a> (<a
+            <a href="https://c-u-l8er.link">IDEATION</a> (<a href="https://watermark.wrand.cc">DESIGN</a>
+            &#x2022; <a
                 href="https://wrand.cc">R&D</a
             >
-            &#x2022; <a href="https://webtracks.click">TRACK</a>
-            &#x2022; <a href="https://webhost.systems">HOST</a> &#x2022;
-            <a href="https://bendscript.com">SCRIPT</a>)
+            &#x2022; <a href="https://opensentience.org">PRODUCTION</a>)
             <div style="float: right;">
                 &#123; <a href="https://istrav.com">WEB SOLUTIONS</a> &#x2022;
                 <a href="https://subvind.com">COMMUNITY SOLUTIONS</a> &#125;
