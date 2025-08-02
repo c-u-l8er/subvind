@@ -49,7 +49,7 @@
                 your values.
             </div>
             <a
-                href="https://discord.gg/JNtm4BUt"
+                href="https://discord.gg/27dBhn3zuc"
                 target="_blank"
                 class="notecard-btn">Join Our Discord</a
             >
