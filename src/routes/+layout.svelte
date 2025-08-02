@@ -16,6 +16,7 @@
     import Marketing from "$lib/Marketing.svelte";
     import CloudLayer from "$lib/CloudLayer.svelte";
     import Spoiler from "$lib/Spoiler.svelte";
+    import DemoCode from "$lib/DemoCode.svelte";
 
     let database: any;
     let term: any;
@@ -308,6 +309,7 @@
 
 <CloudLayer />
 <Marketing />
+<DemoCode lab="subvind" />
 <Divider />
 <ContactUs />
 <Footer />

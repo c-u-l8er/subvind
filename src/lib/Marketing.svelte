@@ -59,6 +59,7 @@
             <div class="notecard-body">
                 <div class="code-wrap">
                     <pre class="code-block">
+                        <code>
       -------
       FORMULA:
 COMMUNITY SOLUTIONS
@@ -70,7 +71,8 @@ COMMUNITY SOLUTIONS
       -------
       SUBVIND:
 COMMUNITY SOLUTIONS
-      -------</pre>
+      -------</code>
+    </pre>
                 </div>
             </div>
             <a
@@ -84,7 +86,7 @@ COMMUNITY SOLUTIONS
         "The map is not the territory, <br />but the pattern is the path."
         ~ArtInt
     </p>
-    <section class="portfolio-summary">
+    <!-- <section class="portfolio-summary">
         <h2>OPEN SOURCE GAMIFICATION</h2>
         <div class="tag-cloud">
             {#each gamificationTags as tag, i}
@@ -99,7 +101,7 @@ COMMUNITY SOLUTIONS
                 </a>
             {/each}
         </div>
-    </section>
+    </section> -->
     <br />
     <br />
 </div>
@@ -110,8 +112,11 @@ COMMUNITY SOLUTIONS
     }
 
     .code-block {
-        width: 175px;
-        margin: 0 auto;
+        width: 175px !important;
+        margin: 0 auto !important;
+        background: transparent !important;
+        font-size: 1em;
+        border: none !important;
     }
 
     .banner {
