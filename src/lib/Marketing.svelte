@@ -24,7 +24,7 @@
             systems, real-time data, and collaborative platforms with gamification
             elements.
         </div>
-        <div class="banner-title">WIN BUSINESS OUTCOMES</div>
+        <div class="banner-title">WIN INTELLIGENCE OUTCOMES</div>
         <a
             href="https://github.com/c-u-l8er"
             target="_blank"
