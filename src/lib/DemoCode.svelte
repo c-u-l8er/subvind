@@ -500,7 +500,19 @@ packetflow.subscribe('pattern_discovery', (discovery) => {
                     {/each}
                 </div>
             </div>
-        {/if}    
+        {/if}
+        
+        <div class="opensentience">
+            <div class="opensentience-content">
+                <h3 class="opensentience-title">Capability-Oriented<br /> Intelligence Platforms</h3>
+                <p class="opensentience-description">
+                    PacketFlow is a declarative, distributed systems framework that enables AI capabilities to be discovered, composed, and executed across network boundaries. Build intelligent systems from reusable capability modules with built-in observability and cross-organizational collaboration.
+                </p>
+                <a href="https://opensentience.org" class="opensentience-button">
+                    OpenSentience.org
+                </a>
+            </div>
+        </div>
     </div>
     <br />
     <br />
@@ -508,6 +520,46 @@ packetflow.subscribe('pattern_discovery', (discovery) => {
 </div>
 
 <style>
+
+    .opensentience-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .opensentience-title {
+        color: white;
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .opensentience-description {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .opensentience-button {
+        background: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);
+        color: white;
+        padding: 15px 40px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+    
+    .opensentience-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    }
     
     .wrapper {
         background: #2c3e50;
