@@ -78,7 +78,7 @@ COMMUNITY SOLUTIONS
             <a
                 href="https://wrand.cc/laboratory"
                 target="_blank"
-                class="notecard-btn">Join Our Laboratory #33</a
+                class="notecard-btn">Join Our Idea Factory</a
             >
         </div>
     </div>
