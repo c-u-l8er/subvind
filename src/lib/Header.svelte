@@ -15,7 +15,7 @@
 <header class="cloud-header">
     <div class="domain-nav">
         <div class="domain-container">
-            <a href="https://c-u-l8er.link">IDEATION</a> (<a href="https://watermark.wrand.cc">DESIGN</a>
+            <a href="https://c-u-l8er.link">IDEATION</a> (<a href="https://ampersandboxdesign.com">DESIGN</a>
             &#x2022; <a
                 href="https://wrand.cc">R&D</a
             >
