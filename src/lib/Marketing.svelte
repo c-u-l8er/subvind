@@ -20,9 +20,9 @@
 <div class="marketing">
     <div class="banner">
         <div class="banner-subtitle">
-            Building engaged digital communities<br /> through interwoven information
-            systems, real-time data, and collaborative platforms with gamification
-            elements.
+            Building engaged digital substrates<br /> using interwoven information
+            systems, real-time data, and collaborative platforms with amalgam
+            interplay.
         </div>
         <div class="banner-title">WIN INTELLIGENCE OUTCOMES</div>
         <a
@@ -45,7 +45,7 @@
                 bounce traffic from layer to layer in currents. All while
                 recording movement over sensors. At the endpoints traffic gets
                 directed in a loop back to main. Join our discord for more about
-                how our formula for winning business outcomes can align with
+                how our formula for winning intelligence outcomes can align with
                 your values.
             </div>
             <a
@@ -76,9 +76,9 @@ COMMUNITY SOLUTIONS
                 </div>
             </div>
             <a
-                href="https://wrand.cc/laboratory"
+                href="https://wrand.cc"
                 target="_blank"
-                class="notecard-btn">Join Our Idea Factory</a
+                class="notecard-btn">Learn More</a
             >
         </div>
     </div>

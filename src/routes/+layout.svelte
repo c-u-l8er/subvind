@@ -309,7 +309,7 @@
 
 <CloudLayer />
 <Marketing />
-<DemoCode lab="subvind" />
+<!-- <DemoCode lab="subvind" /> -->
 <Divider />
 <ContactUs />
 <Footer />
