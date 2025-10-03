@@ -20,7 +20,7 @@
 <div class="marketing">
     <div class="banner">
         <div class="banner-subtitle">
-            Building engaged digital substrates<br /> using interwoven information
+            Building engaging digital substrates<br /> using interwoven information
             systems, real-time data, and collaborative platforms with amalgam
             interplay.
         </div>
