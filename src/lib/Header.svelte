@@ -24,8 +24,16 @@
                 &#123; <a href="https://istrav.com">WEB SOLUTIONS</a> &#x2022;
                 <a href="https://subvind.com">COMMUNITY SOLUTIONS</a> &#125;
                 <a
+                    href="https://alkeyword.com"
+                    >CONTROL</a
+                >@<a
                     href="https://bendscript.com"
                     >POWER</a
+                >
+                //
+                <a
+                    href="https://runefort.com"
+                    >GAME</a
                 >
             </div>
         </div>
