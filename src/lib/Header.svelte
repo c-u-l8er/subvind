@@ -48,7 +48,7 @@
     }
 
     .domain-container {
-        width: 1000px;
+        width: 1100px;
         margin: 0 auto;
         padding: 2px 0 0 0;
         font-size: 16px;
