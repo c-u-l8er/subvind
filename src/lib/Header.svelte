@@ -15,7 +15,7 @@
 <header class="cloud-header">
     <div class="domain-nav">
         <div class="domain-container">
-            <a href="https://c-u-l8er.link">IDEATION</a> (<a href="https://traaviis.com">INTELLIGENCE</a> &#x2022;
+            <a href="https://c-u-l8er.link">CONCEPT</a> (<a href="https://traaviis.com">INTELLIGENCE</a> &#x2022;
             <a href="https://ampersandboxdesign.com">DESIGN</a>
             &#x2022; <a
                 href="https://wrand.cc">R&D</a
@@ -24,16 +24,16 @@
                 &#123; <a href="https://istrav.com">WEB SOLUTIONS</a> &#x2022;
                 <a href="https://subvind.com">COMMUNITY SOLUTIONS</a> &#125;
                 <a
-                    href="https://alkeyword.com"
-                    >CONTROL</a
+                    href="https://brokenrecord.studio"
+                    >AGENTIC</a
                 >@<a
                     href="https://bendscript.com"
-                    >POWER</a
+                    >AUTONOMIC</a
                 >
                 //
                 <a
                     href="https://runefort.com"
-                    >GAME</a
+                    >IDEATION</a
                 >
             </div>
         </div>
