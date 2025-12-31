@@ -15,26 +15,20 @@
 <header class="cloud-header">
     <div class="domain-nav">
         <div class="domain-container">
-            <a href="https://c-u-l8er.link">CONCEPT</a> (<a href="https://traaviis.com">INTELLIGENCE</a> &#x2022;
+            <a href="https://c-u-l8er.link">COSMIC</a> (<a
+                href="https://traaviis.com">INTELLIGENCE</a
+            >
+            &#x2022;
             <a href="https://ampersandboxdesign.com">DESIGN</a>
-            &#x2022; <a
-                href="https://wrand.cc">R&D</a
-            >)
+            &#x2022; <a href="https://wrand.cc">R&D</a>)
             <div style="float: right;">
                 &#123; <a href="https://istrav.com">WEB SOLUTIONS</a> &#x2022;
                 <a href="https://subvind.com">COMMUNITY SOLUTIONS</a> &#125;
-                <a
-                    href="https://brokenrecord.studio"
-                    >AGENTIC</a
-                >@<a
-                    href="https://bendscript.com"
-                    >AUTONOMIC</a
+                <a href="https://brokenrecord.studio">AGENTIC</a>@<a
+                    href="https://bendscript.com">PHYSIC</a
                 >
                 //
-                <a
-                    href="https://runefort.com"
-                    >IDEATION</a
-                >
+                <a href="https://runefort.com">WAFER</a>
             </div>
         </div>
     </div>
